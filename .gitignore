@@ -1,0 +1,23 @@
+# Godot 4+
+.godot/
+/android/
+ 
+# Godot 3.x (harmless to keep if you're on 4)
+.import/
+export.cfg
+export_credentials.cfg
+ 
+# Auto-generated translations (from CSV files)
+*.translation
+ 
+# C# / Mono (only matters if you use C#)
+.mono/
+data_*/
+mono_crash.*.json
+ 
+# Export output
+/build/
+/exports/
+ 
+# macOS
+.DS_Store
