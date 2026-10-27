@@ -4,7 +4,23 @@
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://Main/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://Main/tree.tscn" id="2_gyfs4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
+size = Vector2(20, 5)
+
 [node name="Node2D" type="Node2D" unique_id=1200829281]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673]
+script = ExtResource("2_d5x1h")
+
+[node name="Character_Sprite2D" type="Sprite2D" parent="Player" unique_id=64670256]
+scale = Vector2(1.79, 1.79)
+texture = ExtResource("1_2c62f")
+region_enabled = true
+region_rect = Rect2(0, 0, 100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=826521078]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_oypmb")
 
 [node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
 
@@ -21,13 +37,3 @@ position = Vector2(0, 101)
 
 [node name="Tree5" parent="Forrest" unique_id=254478954 instance=ExtResource("2_gyfs4")]
 position = Vector2(124, -4)
-
-[node name="Character" type="Node2D" parent="." unique_id=770647974]
-script = ExtResource("2_d5x1h")
-
-[node name="Character_Sprite2D" type="Sprite2D" parent="Character" unique_id=64670256]
-position = Vector2(90, 89)
-scale = Vector2(1.79, 1.79)
-texture = ExtResource("1_2c62f")
-region_enabled = true
-region_rect = Rect2(0, 0, 100, 100)
