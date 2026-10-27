@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cvp763u44uxky"]
+
+[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://Main/Soldier.png" id="1_2c62f"]
+[ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://Main/character.gd" id="2_d5x1h"]
+[ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://Main/tree.tscn" id="2_gyfs4"]
+
+[node name="Node2D" type="Node2D" unique_id=1200829281]
+
+[node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
+
+[node name="Tree" parent="Forrest" unique_id=2109672123 instance=ExtResource("2_gyfs4")]
+
+[node name="Tree2" parent="Forrest" unique_id=273464716 instance=ExtResource("2_gyfs4")]
+position = Vector2(233, -2)
+
+[node name="Tree3" parent="Forrest" unique_id=1117916487 instance=ExtResource("2_gyfs4")]
+position = Vector2(129, 96)
+
+[node name="Tree4" parent="Forrest" unique_id=953887491 instance=ExtResource("2_gyfs4")]
+position = Vector2(0, 101)
+
+[node name="Tree5" parent="Forrest" unique_id=254478954 instance=ExtResource("2_gyfs4")]
+position = Vector2(124, -4)
+
+[node name="Character" type="Node2D" parent="." unique_id=770647974]
+script = ExtResource("2_d5x1h")
+
+[node name="Character_Sprite2D" type="Sprite2D" parent="Character" unique_id=64670256]
+position = Vector2(90, 89)
+scale = Vector2(1.79, 1.79)
+texture = ExtResource("1_2c62f")
+region_enabled = true
+region_rect = Rect2(0, 0, 100, 100)

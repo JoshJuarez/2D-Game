@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ddhwno0c24ybr"]
+
+[ext_resource type="Texture2D" uid="uid://dv2iiaudhwrwx" path="res://Main/Trees+.png" id="1_brfkd"]
+
+[node name="Tree" type="Node2D" unique_id=2109672123]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=349413512]
+position = Vector2(38, 47)
+texture = ExtResource("1_brfkd")
+region_enabled = true
+region_rect = Rect2(0, 13, 75, 83)
