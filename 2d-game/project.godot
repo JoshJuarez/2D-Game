@@ -13,7 +13,7 @@ config_version=5
 config/name="2D-Game"
 run/main_scene="uid://cvp763u44uxky"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Main/misc_assets/icon.svg"
 
 [autoload]
 

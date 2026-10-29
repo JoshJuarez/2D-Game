@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://cvp763u44uxky"]
 
-[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://Main/Soldier.png" id="1_2c62f"]
-[ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://Main/character.gd" id="2_d5x1h"]
-[ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://Main/tree.tscn" id="2_gyfs4"]
-[ext_resource type="Texture2D" uid="uid://cab0x6i4n87cl" path="res://icon.svg" id="4_c6a5q"]
-[ext_resource type="Script" uid="uid://660f7c2b1dty" path="res://Main/dummy.gd" id="5_p7hih"]
+[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://Main/player_assets/Soldier.png" id="1_2c62f"]
+[ext_resource type="PackedScene" uid="uid://bxu5rsmcxvvlk" path="res://Main/scenes/orc.tscn" id="1_l84nh"]
+[ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://Main/scripts/character.gd" id="2_d5x1h"]
+[ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://Main/scenes/tree.tscn" id="2_gyfs4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(20, 5)
@@ -15,10 +14,11 @@ size = Vector2(28, 38)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqo2k"]
 size = Vector2(36, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o78xb"]
-size = Vector2(120, 120)
-
 [node name="Node2D" type="Node2D" unique_id=1200829281]
+y_sort_enabled = true
+
+[node name="Orc" parent="." unique_id=879571129 instance=ExtResource("1_l84nh")]
+position = Vector2(100, 0)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673 groups=["player"]]
 script = ExtResource("2_d5x1h")
@@ -44,6 +44,7 @@ position = Vector2(-8, 12)
 shape = SubResource("RectangleShape2D_aqo2k")
 
 [node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
+y_sort_enabled = true
 
 [node name="Tree" parent="Forrest" unique_id=2109672123 instance=ExtResource("2_gyfs4")]
 position = Vector2(250, 113)
@@ -99,16 +100,3 @@ offset_top = 37.0
 offset_right = 832.0
 offset_bottom = 60.0
 text = "XP"
-
-[node name="Dummy" type="StaticBody2D" parent="." unique_id=1617093183]
-position = Vector2(101, 6)
-script = ExtResource("5_p7hih")
-
-[node name="Sprite2D" type="Sprite2D" parent="Dummy" unique_id=874313214]
-position = Vector2(100, 0)
-texture = ExtResource("4_c6a5q")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dummy" unique_id=1585594605]
-position = Vector2(100, 0)
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_o78xb")

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bxu5rsmcxvvlk"]
+
+[ext_resource type="Script" uid="uid://dy7a1rcgfxaxt" path="res://Main/scripts/orc.gd" id="1_3xw0u"]
+[ext_resource type="Texture2D" uid="uid://duq5ub7lg6ejp" path="res://Main/orc_assets/Orc.png" id="2_7aq2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
+size = Vector2(20, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wxl"]
+size = Vector2(30, 17)
+
+[node name="Orc" type="CharacterBody2D" unique_id=879571129]
+script = ExtResource("1_3xw0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=47653582]
+scale = Vector2(1.79, 1.79)
+texture = ExtResource("2_7aq2n")
+region_enabled = true
+region_rect = Rect2(0, 0, 100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1369035932]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_oypmb")
+
+[node name="ContactArea" type="Area2D" parent="." unique_id=515349014]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ContactArea" unique_id=1868526194]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_v2wxl")
