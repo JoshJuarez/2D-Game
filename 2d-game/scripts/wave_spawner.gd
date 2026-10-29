@@ -3,7 +3,7 @@ extends Node
 signal wave_started(wave_number)
 signal all_waves_cleared
 
-const ORC_SCENE = preload("res://Main/scenes/orc.tscn")
+const ORC_SCENE = preload("res://2d-game/scenes/orc.tscn")
 const TOTAL_WAVES = 5
 const SPAWN_DISTANCE = 350.0
 
