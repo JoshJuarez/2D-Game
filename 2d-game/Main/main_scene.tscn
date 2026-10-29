@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://Main/Soldier.png" id="1_2c62f"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://Main/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://Main/tree.tscn" id="2_gyfs4"]
+
 [ext_resource type="Texture2D" uid="uid://jyuena8t7iu7" path="res://Main/FREE_Knight 2D Pixel Art v1.2/Sprites/ATTACK 1.png" id="4_84ifs"]
 [ext_resource type="Texture2D" uid="uid://swcwy1qq4m3g" path="res://Main/FREE_Knight 2D Pixel Art v1.2/Sprites/BLOCK.png" id="4_bpx3i"]
 [ext_resource type="Texture2D" uid="uid://b3ig5f4cbar06" path="res://Main/FREE_Knight 2D Pixel Art v1.2/Sprites/IDLE.png" id="4_cp60a"]
@@ -17,8 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://dkypw4wucqwvp" path="res://Main/FREE_Knight 2D Pixel Art v1.2/Sprites/JUMP-FALL.png" id="6_ytex5"]
 [ext_resource type="Texture2D" uid="uid://boc26npw14m1v" path="res://Main/FREE_Knight 2D Pixel Art v1.2/Sprites/DEATH.png" id="8_ywvv2"]
 
+[ext_resource type="Texture2D" uid="uid://cab0x6i4n87cl" path="res://icon.svg" id="4_c6a5q"]
+[ext_resource type="Script" uid="uid://660f7c2b1dty" path="res://Main/dummy.gd" id="5_p7hih"]
+
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(20, 5)
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bv0qs"]
 atlas = ExtResource("4_84ifs")
@@ -759,9 +765,19 @@ animations = [{
 radius = 22.0
 height = 44.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wxl"]
+size = Vector2(28, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqo2k"]
+size = Vector2(36, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o78xb"]
+size = Vector2(120, 120)
+
+
 [node name="Node2D" type="Node2D" unique_id=1200829281]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673 groups=["player"]]
 script = ExtResource("2_d5x1h")
 
 [node name="Character_Sprite2D" type="Sprite2D" parent="Player" unique_id=64670256]
@@ -775,10 +791,22 @@ region_rect = Rect2(0, 0, 100, 100)
 position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_oypmb")
 
+[node name="AttackHitbox" type="Area2D" parent="Player" unique_id=1453103284]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackHitbox" unique_id=61225120]
+position = Vector2(23, 1)
+shape = SubResource("RectangleShape2D_v2wxl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AttackHitbox" unique_id=400381195]
+position = Vector2(-8, 12)
+shape = SubResource("RectangleShape2D_aqo2k")
+
 [node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
 
 [node name="Tree" parent="Forrest" unique_id=2109672123 instance=ExtResource("2_gyfs4")]
-position = Vector2(225, 395)
+
+position = Vector2(250, 113)
+
 
 [node name="Tree2" parent="Forrest" unique_id=273464716 instance=ExtResource("2_gyfs4")]
 position = Vector2(331, 441)
@@ -801,6 +829,7 @@ offset_top = 1.0
 offset_right = 766.0
 offset_bottom = 28.0
 value = 100.0
+show_percentage = false
 
 [node name="XP bar" type="ProgressBar" parent="CanvasLayer" unique_id=1684438289]
 custom_minimum_size = Vector2(200, 25)
@@ -831,6 +860,7 @@ offset_right = 832.0
 offset_bottom = 60.0
 text = "XP"
 
+
 [node name="Brawler" type="CharacterBody2D" parent="." unique_id=285651954]
 position = Vector2(37, 40)
 script = ExtResource("4_ig3ht")
@@ -843,3 +873,16 @@ animation = &"Jump_Start"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Brawler" unique_id=183178333]
 position = Vector2(59, 97)
 shape = SubResource("CapsuleShape2D_yyvib")
+
+[node name="Dummy" type="StaticBody2D" parent="." unique_id=1617093183]
+position = Vector2(101, 6)
+script = ExtResource("5_p7hih")
+
+[node name="Sprite2D" type="Sprite2D" parent="Dummy" unique_id=874313214]
+position = Vector2(100, 0)
+texture = ExtResource("4_c6a5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dummy" unique_id=1585594605]
+position = Vector2(100, 0)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_o78xb")
