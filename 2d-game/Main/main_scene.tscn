@@ -62,3 +62,17 @@ offset_top = 7.0
 offset_right = 544.0
 offset_bottom = 30.0
 text = "Level 1"
+
+[node name="health label" type="Label" parent="CanvasLayer" unique_id=966863254]
+offset_left = 777.0
+offset_top = 8.0
+offset_right = 831.0
+offset_bottom = 31.0
+text = "Health"
+
+[node name="XP label" type="Label" parent="CanvasLayer" unique_id=1336499270]
+offset_left = 778.0
+offset_top = 37.0
+offset_right = 832.0
+offset_bottom = 60.0
+text = "XP"
