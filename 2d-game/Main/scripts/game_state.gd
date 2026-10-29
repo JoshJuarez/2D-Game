@@ -17,6 +17,8 @@ var xp = 0
 var level = 1
 var wave = 0
 
+signal upgraded(stat)
+
 func _ready() -> void:
 	start_run(selected_class)
 
@@ -48,3 +50,4 @@ func apply_upgrade(stat: String) -> void:
 		"hp": max_hp += 25
 		"speed": speed += 25
 		"strength": strength += 5
+	upgraded.emit(stat)

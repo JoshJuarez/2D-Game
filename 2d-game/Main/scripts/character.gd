@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-var speed = 0
 var health = 0
 var time_since_hit = 0.0 
 var attack_cooldown = 0.0
@@ -8,15 +7,14 @@ var invincible_time = 0.0
 
 func _ready() -> void:
 	add_to_group("player")
-	speed = GameState.speed
 	health = GameState.max_hp
-	get_node("../CanvasLayer/HP bar").max_value = GameState.max_hp
 	get_node("../CanvasLayer/XP bar").value = GameState.xp
+	GameState.upgraded.connect(_on_upgraded)
 	
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * speed
+	velocity = direction * GameState.speed
 	move_and_slide()
 	
 	attack_cooldown -= delta
@@ -34,10 +32,12 @@ func _physics_process(delta: float) -> void:
 		health = min(health + 5.0 * delta, GameState.max_hp)
 		
 	get_node("../CanvasLayer/HP bar").value = health
+	get_node("../CanvasLayer/HP bar").max_value = GameState.max_hp
 	get_node("../CanvasLayer/health label").text = str(int(health)) + " / " + str(GameState.max_hp)
 	get_node("../CanvasLayer/XP bar").value = GameState.xp
 	get_node("../CanvasLayer/XP bar").max_value = GameState.xp_to_next_level()
 	get_node("../CanvasLayer/Label").text = "Level " + str(GameState.level)
+	get_node("../CanvasLayer/wave label").text = "Wave " + str(GameState.wave) + " / 5"
 	
 func take_damage(amount: int) -> void:
 	if invincible_time > 0:
@@ -61,3 +61,7 @@ func attack() -> void:
 	for body in $AttackHitbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
 			body.take_damage(GameState.strength)
+	
+func _on_upgraded(stat: String) -> void:
+	if stat == "hp":
+		health = min(health + 25.0, GameState.max_hp)

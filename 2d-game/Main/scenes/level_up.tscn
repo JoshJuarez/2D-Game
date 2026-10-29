@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bwsxd6d7ssqe3"]
+
+[ext_resource type="Script" uid="uid://b0carlj06u5df" path="res://Main/scripts/level_up.gd" id="1_u8jty"]
+
+[node name="LevelUp" type="CanvasLayer" unique_id=2132028684]
+process_mode = 3
+layer = 10
+script = ExtResource("1_u8jty")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1453644287]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.5
+offset_top = -90.0
+offset_right = 101.5
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1383726374]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1642749675]
+layout_mode = 2
+text = "
+    Level Up! Choose one:    
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HPButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=2041181922]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "   +25 Max HP   "
+
+[node name="SpeedButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=346880431]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "    +25 Speed     "
+
+[node name="StrengthButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=208907217]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "   +5 Strength   "

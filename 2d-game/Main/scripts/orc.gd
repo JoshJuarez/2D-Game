@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal died
+
 var health = 30
 var speed = 110
 var contact_damage = 10
@@ -40,4 +42,5 @@ func take_damage(amount: int) -> void:
 	recoil_time = 0.2
 	if(health <= 0):
 		player.enemy_defeated() 
+		died.emit()
 		queue_free()

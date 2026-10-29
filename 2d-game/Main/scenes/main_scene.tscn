@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cvp763u44uxky"]
 
 [ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://Main/player_assets/Soldier.png" id="1_2c62f"]
-[ext_resource type="PackedScene" uid="uid://bxu5rsmcxvvlk" path="res://Main/scenes/orc.tscn" id="1_l84nh"]
+[ext_resource type="PackedScene" uid="uid://bwsxd6d7ssqe3" path="res://Main/scenes/level_up.tscn" id="1_y1g6j"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://Main/scripts/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://Main/scenes/tree.tscn" id="2_gyfs4"]
+[ext_resource type="Script" uid="uid://bq7m7crprs868" path="res://Main/scripts/wave_spawner.gd" id="5_y1g6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(20, 5)
@@ -17,8 +18,10 @@ size = Vector2(36, 16)
 [node name="Node2D" type="Node2D" unique_id=1200829281]
 y_sort_enabled = true
 
-[node name="Orc" parent="." unique_id=879571129 instance=ExtResource("1_l84nh")]
-position = Vector2(100, 0)
+[node name="LevelUp" parent="." unique_id=2132028684 instance=ExtResource("1_y1g6j")]
+
+[node name="WaveSpawner" type="Node" parent="." unique_id=978417912]
+script = ExtResource("5_y1g6j")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673 groups=["player"]]
 script = ExtResource("2_d5x1h")
@@ -43,6 +46,8 @@ shape = SubResource("RectangleShape2D_v2wxl")
 position = Vector2(-8, 12)
 shape = SubResource("RectangleShape2D_aqo2k")
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=725029376]
+
 [node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
 y_sort_enabled = true
 
@@ -65,38 +70,44 @@ position = Vector2(124, -4)
 
 [node name="HP bar" type="ProgressBar" parent="CanvasLayer" unique_id=600079188]
 custom_minimum_size = Vector2(200, 25)
-offset_left = 566.0
-offset_top = 1.0
-offset_right = 766.0
-offset_bottom = 28.0
+offset_left = 86.0
+offset_top = 569.0
+offset_right = 286.0
+offset_bottom = 596.0
 value = 100.0
 show_percentage = false
 
 [node name="XP bar" type="ProgressBar" parent="CanvasLayer" unique_id=1684438289]
 custom_minimum_size = Vector2(200, 25)
-offset_left = 567.0
-offset_top = 33.0
-offset_right = 767.0
-offset_bottom = 60.0
+offset_left = 87.0
+offset_top = 601.0
+offset_right = 287.0
+offset_bottom = 628.0
 value = 100.0
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=391544106]
-offset_left = 490.0
-offset_top = 7.0
-offset_right = 544.0
-offset_bottom = 30.0
+offset_left = 10.0
+offset_top = 575.0
+offset_right = 64.0
+offset_bottom = 598.0
 text = "Level 1"
 
 [node name="health label" type="Label" parent="CanvasLayer" unique_id=966863254]
-offset_left = 777.0
-offset_top = 8.0
-offset_right = 831.0
-offset_bottom = 31.0
+offset_left = 297.0
+offset_top = 576.0
+offset_right = 351.0
+offset_bottom = 599.0
 text = "Health"
 
 [node name="XP label" type="Label" parent="CanvasLayer" unique_id=1336499270]
-offset_left = 778.0
-offset_top = 37.0
-offset_right = 832.0
-offset_bottom = 60.0
+offset_left = 298.0
+offset_top = 605.0
+offset_right = 352.0
+offset_bottom = 628.0
 text = "XP"
+
+[node name="wave label" type="Label" parent="CanvasLayer" unique_id=946353732]
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 52.0
+offset_bottom = 30.0
