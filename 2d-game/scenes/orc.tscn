@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxu5rsmcxvvlk"]
 
-[ext_resource type="Script" uid="uid://dy7a1rcgfxaxt" path="res://Main/scripts/orc.gd" id="1_3xw0u"]
-[ext_resource type="Texture2D" uid="uid://duq5ub7lg6ejp" path="res://Main/orc_assets/Orc.png" id="2_7aq2n"]
+[ext_resource type="Script" uid="uid://dy7a1rcgfxaxt" path="res://2d-game/scripts/orc.gd" id="1_3xw0u"]
+[ext_resource type="Texture2D" uid="uid://duq5ub7lg6ejp" path="res://2d-game/assets/orc/Orc.png" id="2_7aq2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(20, 7)

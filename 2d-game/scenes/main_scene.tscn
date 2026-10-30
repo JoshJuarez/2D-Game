@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvp763u44uxky"]
 
-[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://2d-game/player_assets/Soldier.png" id="1_2c62f"]
+[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://2d-game/assets/soldier/Soldier.png" id="1_2c62f"]
 [ext_resource type="PackedScene" uid="uid://bwsxd6d7ssqe3" path="res://2d-game/scenes/level_up.tscn" id="1_y1g6j"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://2d-game/scripts/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://2d-game/scenes/tree.tscn" id="2_gyfs4"]

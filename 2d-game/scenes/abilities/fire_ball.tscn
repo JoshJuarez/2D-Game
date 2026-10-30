@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bidqv2gcc6k30"]
+
+[ext_resource type="Texture2D" uid="uid://bmmupoe2uef24" path="res://2d-game/assets/effects/Fire_Ball/001.png" id="1_vqlov"]
+[ext_resource type="Script" uid="uid://c5sq8xiu0ydye" path="res://2d-game/scripts/abilities/fire_ball.gd" id="1_y2w3x"]
+[ext_resource type="Texture2D" uid="uid://xcjwmlx16ws6" path="res://2d-game/assets/effects/Fire_Ball/002.png" id="2_y2w3x"]
+[ext_resource type="Texture2D" uid="uid://cwemtpyysg0ig" path="res://2d-game/assets/effects/Fire_Ball/003.png" id="3_ag3rw"]
+[ext_resource type="Texture2D" uid="uid://cmosj08nexnrq" path="res://2d-game/assets/effects/Fire_Ball/004.png" id="4_80xcq"]
+[ext_resource type="Texture2D" uid="uid://ci5ku7byjfvyd" path="res://2d-game/assets/effects/Fire_Ball/005.png" id="5_kmkak"]
+[ext_resource type="Texture2D" uid="uid://dspulrjb3aolc" path="res://2d-game/assets/effects/Fire_Ball/006.png" id="6_gopel"]
+[ext_resource type="Texture2D" uid="uid://duuyxyx2tupyw" path="res://2d-game/assets/effects/Fire_Ball/007.png" id="7_436c6"]
+[ext_resource type="Texture2D" uid="uid://ckwry5ky488t5" path="res://2d-game/assets/effects/Fire_Ball/008.png" id="8_hfubi"]
+[ext_resource type="Texture2D" uid="uid://pgbe11ftws7x" path="res://2d-game/assets/effects/Fire_Ball/009.png" id="9_o5pre"]
+[ext_resource type="Texture2D" uid="uid://dmhatsty4krcl" path="res://2d-game/assets/effects/Fire_Ball/010.png" id="10_6k1tw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yyvib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vqlov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y2w3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ag3rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_80xcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kmkak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gopel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_436c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hfubi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o5pre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6k1tw")
+}],
+"loop": 1,
+"name": &"FireBall",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yyvib"]
+radius = 30.0
+height = 60.0
+
+[node name="Fireball" type="Area2D" unique_id=294029285]
+script = ExtResource("1_y2w3x")
+lifetime = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1742410651]
+sprite_frames = SubResource("SpriteFrames_yyvib")
+animation = &"FireBall"
+autoplay = "FireBall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1018247357]
+position = Vector2(188, 135)
+shape = SubResource("CapsuleShape2D_yyvib")

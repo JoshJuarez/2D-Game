@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddhwno0c24ybr"]
 
-[ext_resource type="Texture2D" uid="uid://dv2iiaudhwrwx" path="res://Main/misc_assets/Trees+.png" id="1_brfkd"]
+[ext_resource type="Texture2D" uid="uid://dv2iiaudhwrwx" path="res://2d-game/assets/environment/Trees+.png" id="1_brfkd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(61, 25)
