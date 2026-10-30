@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cvp763u44uxky"]
+[gd_scene format=3]
 
 [ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://2d-game/player_assets/Soldier.png" id="1_2c62f"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://2d-game/scripts/character.gd" id="2_d5x1h"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://e3yipshhr2lm" path="res://2d-game/Main/FREE_Knight 2D Pixel Art v1.2/Sprites/WALK.png" id="4_p7hih"]
 [ext_resource type="Texture2D" uid="uid://dyytjepn7e7bg" path="res://2d-game/Main/FREE_Knight 2D Pixel Art v1.2/Sprites/HURT.png" id="4_qa4k6"]
 [ext_resource type="Texture2D" uid="uid://ntr0id617b55" path="res://2d-game/Main/FREE_Knight 2D Pixel Art v1.2/Sprites/RUN.png" id="5_c6a5q"]
-[ext_resource type="Script" uid="uid://660f7c2b1dty" path="res://2d-game/Main/dummy.gd" id="5_p7hih"]
+[ext_resource type="Script" uid="uid://660f7c2b1dty" path="res://2d-game/scripts/dummy.gd" id="5_p7hih"]
 [ext_resource type="Texture2D" uid="uid://dm5g2abhnryv2" path="res://2d-game/Main/FREE_Knight 2D Pixel Art v1.2/Sprites/ATTACK 2.png" id="5_sro0e"]
 [ext_resource type="Texture2D" uid="uid://dx7exnrpthb0b" path="res://2d-game/Main/FREE_Knight 2D Pixel Art v1.2/Sprites/JUMP-TRANSITION.png" id="5_ycg30"]
 [ext_resource type="Texture2D" uid="uid://b61ygjte2qnub" path="res://2d-game/Main/FREE_Knight 2D Pixel Art v1.2/Sprites/ATTACK 3.png" id="6_ld0m2"]
