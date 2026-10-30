@@ -14,6 +14,7 @@ const LOOKS = {
 var look = {}
 var sprite: AnimatedSprite2D
 var hitbox: Area2D
+const FIREBALL = preload("res://2d-game/scenes/abilities/fire_ball.tscn")
 var action_time = 0.0   # while above 0, an attack or hurt animation is playing
 
 func _ready() -> void:
@@ -98,6 +99,16 @@ func attack() -> void:
 	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
 			body.take_damage(GameState.strength)
+
+	if GameState.selected_class == "Mage":
+		shoot_fireball()
+
+func shoot_fireball() -> void:
+	var fireball = FIREBALL.instantiate()
+	fireball.direction = -1.0 if sprite.flip_h else 1.0
+	fireball.damage = GameState.strength
+	fireball.position = global_position + Vector2(15 * fireball.direction, -5)
+	get_parent().add_child(fireball)
 	
 func _on_upgraded(stat: String) -> void:
 	if stat == "hp":

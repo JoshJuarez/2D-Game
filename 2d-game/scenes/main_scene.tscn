@@ -12,22 +12,28 @@
 size = Vector2(20, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wxl"]
-size = Vector2(28, 38)
+size = Vector2(24, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqo2k"]
-size = Vector2(36, 16)
+size = Vector2(40, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mage1"]
-size = Vector2(28, 38)
+size = Vector2(9, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mage2"]
-size = Vector2(36, 16)
+size = Vector2(28, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6evki"]
+size = Vector2(28, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_assn1"]
-size = Vector2(28, 38)
+size = Vector2(11, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_assn2"]
-size = Vector2(36, 16)
+size = Vector2(36, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_denle"]
+size = Vector2(46, 13)
 
 [node name="Node2D" type="Node2D" unique_id=1200829281]
 y_sort_enabled = true
@@ -44,21 +50,22 @@ script = ExtResource("2_d5x1h")
 position = Vector2(0, -23.5)
 sprite_frames = ExtResource("6_knight")
 animation = &"Attack 1"
-frame = 3
+frame = 6
 
 [node name="MageSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502212]
 visible = false
 position = Vector2(0, -9.1)
 scale = Vector2(0.6, 0.6)
 sprite_frames = ExtResource("7_mage")
-animation = &"Idle"
+animation = &"Attack"
 
 [node name="AssassinSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502213]
 visible = false
 position = Vector2(0, -11.5)
 scale = Vector2(0.75, 0.75)
 sprite_frames = ExtResource("8_hooded")
-animation = &"Idle"
+animation = &"Attack 1"
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=826521078]
 position = Vector2(0, 10.5)
@@ -67,32 +74,40 @@ shape = SubResource("RectangleShape2D_oypmb")
 [node name="BrawlerHitbox" type="Area2D" parent="Player" unique_id=1453103284]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/BrawlerHitbox" unique_id=61225120]
-position = Vector2(23, 1)
+position = Vector2(21, -2.5)
 shape = SubResource("RectangleShape2D_v2wxl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/BrawlerHitbox" unique_id=400381195]
-position = Vector2(-8, 12)
+position = Vector2(-10, 4)
 shape = SubResource("RectangleShape2D_aqo2k")
 
 [node name="MageHitbox" type="Area2D" parent="Player" unique_id=1834502221]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1834502222]
-position = Vector2(23, 1)
+position = Vector2(13.5, -5.5)
 shape = SubResource("RectangleShape2D_mage1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1834502223]
-position = Vector2(-8, 12)
+position = Vector2(-4, 8.5)
 shape = SubResource("RectangleShape2D_mage2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1897681579]
+position = Vector2(-4, -17)
+shape = SubResource("RectangleShape2D_6evki")
 
 [node name="AssassinHitbox" type="Area2D" parent="Player" unique_id=1834502231]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502232]
-position = Vector2(23, 1)
+position = Vector2(14.5, -2)
 shape = SubResource("RectangleShape2D_assn1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502233]
-position = Vector2(-8, 12)
+position = Vector2(-8, 9)
 shape = SubResource("RectangleShape2D_assn2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=568742824]
+position = Vector2(-3, -16.5)
+shape = SubResource("RectangleShape2D_denle")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=725029376]
 zoom = Vector2(2, 2)

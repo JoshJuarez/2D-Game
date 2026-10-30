@@ -51,18 +51,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yyvib"]
-radius = 30.0
-height = 60.0
+radius = 7.0
+height = 14.0
 
 [node name="Fireball" type="Area2D" unique_id=294029285]
 script = ExtResource("1_y2w3x")
 lifetime = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1742410651]
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_yyvib")
 animation = &"FireBall"
 autoplay = "FireBall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1018247357]
-position = Vector2(188, 135)
 shape = SubResource("CapsuleShape2D_yyvib")
