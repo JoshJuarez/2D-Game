@@ -7,9 +7,9 @@ var invincible_time = 0.0
 
 # Mahad's characters: which sprite each class uses and its animation names
 const LOOKS = {
-	"Brawler":  {"node": "BrawlerSprite",  "hitbox": "BrawlerHitbox",  "idle": "idle", "run": "run", "attack": "Attack 1", "hurt": "Hurt"},
-	"Mage":     {"node": "MageSprite",     "hitbox": "MageHitbox",     "idle": "Idle", "run": "Run", "attack": "Attack",   "hurt": "Hurt"},
-	"Assassin": {"node": "AssassinSprite", "hitbox": "AssassinHitbox", "idle": "Idle", "run": "run", "attack": "Attack 1", "hurt": "hurt"},
+	"Brawler":  {"node": "BrawlerSprite",  "hitbox": "BrawlerHitbox",  "cooldown": 0.45, "idle": "idle", "run": "run", "attack": "Attack 1", "hurt": "Hurt"},
+	"Mage":     {"node": "MageSprite",     "hitbox": "MageHitbox",     "cooldown": 0.5,  "idle": "Idle", "run": "Run", "attack": "Attack",   "hurt": "Hurt"},
+	"Assassin": {"node": "AssassinSprite", "hitbox": "AssassinHitbox", "cooldown": 0.25, "idle": "Idle", "run": "run", "attack": "Attack 1", "hurt": "hurt"},
 }
 var look = {}
 var sprite: AnimatedSprite2D
@@ -93,7 +93,7 @@ func enemy_defeated() -> void:
 		GameState.add_xp(1)
 		
 func attack() -> void:
-	attack_cooldown = 0.4
+	attack_cooldown = look.cooldown
 	sprite.play(look.attack)
 	action_time = anim_length(look.attack)
 	for area in hitbox.get_overlapping_areas():

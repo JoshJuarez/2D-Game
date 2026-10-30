@@ -28,7 +28,7 @@ size = Vector2(28, 9)
 size = Vector2(28, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_assn1"]
-size = Vector2(11, 32)
+size = Vector2(22, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_assn2"]
 size = Vector2(36, 10)
@@ -99,7 +99,7 @@ shape = SubResource("RectangleShape2D_6evki")
 [node name="AssassinHitbox" type="Area2D" parent="Player" unique_id=1834502231]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502232]
-position = Vector2(14.5, -2)
+position = Vector2(19, -2)
 shape = SubResource("RectangleShape2D_assn1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502233]

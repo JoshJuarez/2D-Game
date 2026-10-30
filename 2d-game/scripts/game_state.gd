@@ -5,7 +5,7 @@ signal xp_changed(current_xp, xp_needed)
 
 const CLASSES = {
 	"Brawler":  {"max_hp": 150, "speed": 160, "strength": 15},
-	"Assassin": {"max_hp": 80,  "speed": 260, "strength": 12},
+	"Assassin": {"max_hp": 80,  "speed": 260, "strength": 15},
 	"Mage":     {"max_hp": 90,  "speed": 200, "strength": 25},
 }
 

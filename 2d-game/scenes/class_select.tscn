@@ -36,7 +36,7 @@ text = "   Brawler: 150 HP, slow, 15 dmg   "
 [node name="AssassinButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=625808226]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Assassin: 80 HP, fast, 12 dmg"
+text = "Assassin: 80 HP, fast, 15 dmg"
 
 [node name="MageButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=614911052]
 unique_name_in_owner = true
