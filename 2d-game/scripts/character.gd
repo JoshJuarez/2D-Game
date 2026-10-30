@@ -7,12 +7,13 @@ var invincible_time = 0.0
 
 # Mahad's characters: which sprite each class uses and its animation names
 const LOOKS = {
-	"Brawler":  {"node": "BrawlerSprite",  "idle": "idle", "run": "run", "attack": "Attack 1", "hurt": "Hurt"},
-	"Mage":     {"node": "MageSprite",     "idle": "Idle", "run": "Run", "attack": "Attack",   "hurt": "Hurt"},
-	"Assassin": {"node": "AssassinSprite", "idle": "Idle", "run": "run", "attack": "Attack 1", "hurt": "hurt"},
+	"Brawler":  {"node": "BrawlerSprite",  "hitbox": "BrawlerHitbox",  "idle": "idle", "run": "run", "attack": "Attack 1", "hurt": "Hurt"},
+	"Mage":     {"node": "MageSprite",     "hitbox": "MageHitbox",     "idle": "Idle", "run": "Run", "attack": "Attack",   "hurt": "Hurt"},
+	"Assassin": {"node": "AssassinSprite", "hitbox": "AssassinHitbox", "idle": "Idle", "run": "run", "attack": "Attack 1", "hurt": "hurt"},
 }
 var look = {}
 var sprite: AnimatedSprite2D
+var hitbox: Area2D
 var action_time = 0.0   # while above 0, an attack or hurt animation is playing
 
 func _ready() -> void:
@@ -28,6 +29,12 @@ func _ready() -> void:
 	sprite = get_node(look.node)
 	sprite.visible = true
 	sprite.play(look.idle)
+
+	# Keep only the chosen class's hitbox
+	for info in LOOKS.values():
+		if info.hitbox != look.hitbox:
+			get_node(info.hitbox).queue_free()
+	hitbox = get_node(look.hitbox)
 	
 
 func _physics_process(delta: float) -> void:
@@ -40,7 +47,7 @@ func _physics_process(delta: float) -> void:
 
 	if direction.x != 0:
 		sprite.flip_h = direction.x < 0
-		$AttackHitbox.scale.x = -1 if direction.x < 0 else 1
+		hitbox.scale.x = -1 if direction.x < 0 else 1
 
 	if Input.is_action_just_pressed("attack") and attack_cooldown <= 0:
 		attack()
@@ -69,8 +76,11 @@ func take_damage(amount: int) -> void:
 	health = max(health - amount, 0.0)
 	time_since_hit = 0.0
 	invincible_time = 0.5
-	sprite.play(look.hurt)
-	action_time = 0.25
+	# Getting hit doesn't interrupt an attack animation
+	var attacking = sprite.animation == look.attack and action_time > 0
+	if not attacking:
+		sprite.play(look.hurt)
+		action_time = 0.25
 
 	if health <= 0:
 		GameState.result_text = "You died on wave " + str(GameState.wave) + ", level " + str(GameState.level)
@@ -85,7 +95,7 @@ func attack() -> void:
 	attack_cooldown = 0.4
 	sprite.play(look.attack)
 	action_time = 0.35
-	for body in $AttackHitbox.get_overlapping_bodies():
+	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemy"):
 			body.take_damage(GameState.strength)
 	

@@ -1,10 +1,5 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://dh5r1kp8wz3yn"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://dh5r1kp8w03yn"]
 
-[ext_resource type="Texture2D" uid="uid://dyt8b3frj2571" path="res://2d-game/assets/hooded/SpriteSheet/Parry/Parry.png" id="10_et8do"]
-[ext_resource type="Texture2D" uid="uid://bs1grjg4uowpx" path="res://2d-game/assets/hooded/SpriteSheet/Parry/ParryCounter.png" id="11_gjpie"]
-[ext_resource type="Texture2D" uid="uid://dfd3x36umevqg" path="res://2d-game/assets/hooded/SpriteSheet/Parry/ParryFailed.png" id="12_e5a0i"]
-[ext_resource type="Texture2D" uid="uid://ca34h2aeuovsc" path="res://2d-game/assets/hooded/SpriteSheet/Run/Run.png" id="13_ohvah"]
-[ext_resource type="Texture2D" uid="uid://cmhrbprqy325b" path="res://2d-game/assets/hooded/SpriteSheet/Walk/Walk.png" id="14_56mcy"]
 [ext_resource type="Texture2D" uid="uid://c6jlh0tbpacft" path="res://2d-game/assets/hooded/SpriteSheet/Attack/Attack1.png" id="2_y26cs"]
 [ext_resource type="Texture2D" uid="uid://0sddoseoy8le" path="res://2d-game/assets/hooded/SpriteSheet/Attack/Attack2.png" id="3_i2d8v"]
 [ext_resource type="Texture2D" uid="uid://d25hucdbsfqpk" path="res://2d-game/assets/hooded/SpriteSheet/Death/Death.png" id="4_nkc7s"]
@@ -13,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://chqvut54f1m25" path="res://2d-game/assets/hooded/SpriteSheet/Dash/Dash.png" id="7_u54dd"]
 [ext_resource type="Texture2D" uid="uid://cxqawx425yud3" path="res://2d-game/assets/hooded/SpriteSheet/Jump/DoubleJump.png" id="8_k0eaf"]
 [ext_resource type="Texture2D" uid="uid://dx8mrfrmfd4bq" path="res://2d-game/assets/hooded/SpriteSheet/Hurt/Hurt.png" id="9_h4o2g"]
+[ext_resource type="Texture2D" uid="uid://dyt8b3frj2571" path="res://2d-game/assets/hooded/SpriteSheet/Parry/Parry.png" id="10_et8do"]
+[ext_resource type="Texture2D" uid="uid://bs1grjg4uowpx" path="res://2d-game/assets/hooded/SpriteSheet/Parry/ParryCounter.png" id="11_gjpie"]
+[ext_resource type="Texture2D" uid="uid://dfd3x36umevqg" path="res://2d-game/assets/hooded/SpriteSheet/Parry/ParryFailed.png" id="12_e5a0i"]
+[ext_resource type="Texture2D" uid="uid://ca34h2aeuovsc" path="res://2d-game/assets/hooded/SpriteSheet/Run/Run.png" id="13_ohvah"]
+[ext_resource type="Texture2D" uid="uid://cmhrbprqy325b" path="res://2d-game/assets/hooded/SpriteSheet/Walk/Walk.png" id="14_56mcy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ku0xu"]
 atlas = ExtResource("2_y26cs")

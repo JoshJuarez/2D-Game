@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cvp763u44uxky"]
 
-[ext_resource type="SpriteFrames" uid="uid://bk7n2qw5xr4me" path="res://2d-game/assets/frames/knight_frames.tres" id="6_knight"]
-[ext_resource type="SpriteFrames" uid="uid://cm3x8fj2qa6vt" path="res://2d-game/assets/frames/mage_frames.tres" id="7_mage"]
-[ext_resource type="SpriteFrames" uid="uid://dh5r1kp8wz3yn" path="res://2d-game/assets/frames/hooded_frames.tres" id="8_hooded"]
 [ext_resource type="PackedScene" uid="uid://bwsxd6d7ssqe3" path="res://2d-game/scenes/level_up.tscn" id="1_y1g6j"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://2d-game/scripts/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://2d-game/scenes/tree.tscn" id="2_gyfs4"]
 [ext_resource type="Script" uid="uid://bq7m7crprs868" path="res://2d-game/scripts/wave_spawner.gd" id="5_y1g6j"]
+[ext_resource type="SpriteFrames" uid="uid://bk7n2qw5xr4me" path="res://2d-game/assets/frames/knight_frames.tres" id="6_knight"]
+[ext_resource type="SpriteFrames" uid="uid://cm3x8fj2qa6vt" path="res://2d-game/assets/frames/mage_frames.tres" id="7_mage"]
+[ext_resource type="SpriteFrames" uid="uid://dh5r1kp8w03yn" path="res://2d-game/assets/frames/hooded_frames.tres" id="8_hooded"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(20, 5)
@@ -15,6 +15,18 @@ size = Vector2(20, 5)
 size = Vector2(28, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqo2k"]
+size = Vector2(36, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mage1"]
+size = Vector2(28, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mage2"]
+size = Vector2(36, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_assn1"]
+size = Vector2(28, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_assn2"]
 size = Vector2(36, 16)
 
 [node name="Node2D" type="Node2D" unique_id=1200829281]
@@ -31,7 +43,8 @@ script = ExtResource("2_d5x1h")
 [node name="BrawlerSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502211]
 position = Vector2(0, -23.5)
 sprite_frames = ExtResource("6_knight")
-animation = &"idle"
+animation = &"Attack 1"
+frame = 3
 
 [node name="MageSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502212]
 visible = false
@@ -51,17 +64,38 @@ animation = &"Idle"
 position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_oypmb")
 
-[node name="AttackHitbox" type="Area2D" parent="Player" unique_id=1453103284]
+[node name="BrawlerHitbox" type="Area2D" parent="Player" unique_id=1453103284]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackHitbox" unique_id=61225120]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/BrawlerHitbox" unique_id=61225120]
 position = Vector2(23, 1)
 shape = SubResource("RectangleShape2D_v2wxl")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AttackHitbox" unique_id=400381195]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/BrawlerHitbox" unique_id=400381195]
 position = Vector2(-8, 12)
 shape = SubResource("RectangleShape2D_aqo2k")
 
+[node name="MageHitbox" type="Area2D" parent="Player" unique_id=1834502221]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1834502222]
+position = Vector2(23, 1)
+shape = SubResource("RectangleShape2D_mage1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1834502223]
+position = Vector2(-8, 12)
+shape = SubResource("RectangleShape2D_mage2")
+
+[node name="AssassinHitbox" type="Area2D" parent="Player" unique_id=1834502231]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502232]
+position = Vector2(23, 1)
+shape = SubResource("RectangleShape2D_assn1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502233]
+position = Vector2(-8, 12)
+shape = SubResource("RectangleShape2D_assn2")
+
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=725029376]
+zoom = Vector2(2, 2)
 
 [node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
 y_sort_enabled = true
