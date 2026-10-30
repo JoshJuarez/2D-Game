@@ -16,6 +16,7 @@ var strength = 0
 var xp = 0
 var level = 1
 var wave = 0
+var result_text = ""
 
 signal upgraded(stat)
 

@@ -48,9 +48,9 @@ func take_damage(amount: int) -> void:
 	invincible_time = 0.5
 
 	if health <= 0:
-		print("Player died")
-		queue_free()
-	
+		GameState.result_text = "You died on wave " + str(GameState.wave) + ", level " + str(GameState.level)
+		get_tree().change_scene_to_file("res://2d-game/scenes/result.tscn")	
+		
 func enemy_defeated() -> void:
 	if health > 0:
 		health = min(health + 5.0, GameState.max_hp)

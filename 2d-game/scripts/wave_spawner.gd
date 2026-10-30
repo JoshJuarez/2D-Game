@@ -4,7 +4,7 @@ signal wave_started(wave_number)
 signal all_waves_cleared
 
 const ORC_SCENE = preload("res://2d-game/scenes/orc.tscn")
-const TOTAL_WAVES = 5
+const TOTAL_WAVES = 1
 const SPAWN_DISTANCE = 350.0
 
 var enemies_alive = 0
@@ -38,7 +38,7 @@ func _on_orc_died() -> void:
 	if enemies_alive > 0:
 		return
 	if GameState.wave >= TOTAL_WAVES:
-		print("You win!")
+		get_tree().change_scene_to_file("res://2d-game/scenes/result.tscn")
 		all_waves_cleared.emit()
 	else:
 		await get_tree().create_timer(3.0).timeout
