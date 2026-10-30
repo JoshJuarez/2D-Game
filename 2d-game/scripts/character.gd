@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	get_node("../CanvasLayer/XP bar").value = GameState.xp
 	get_node("../CanvasLayer/XP bar").max_value = GameState.xp_to_next_level()
 	get_node("../CanvasLayer/Label").text = "Level " + str(GameState.level)
-	get_node("../CanvasLayer/wave label").text = "Wave " + str(GameState.wave) + " / 5"
+	#get_node("../CanvasLayer/wave label").text = "Wave " + str(GameState.wave) + " / 5"
 	
 func take_damage(amount: int) -> void:
 	if invincible_time > 0:
