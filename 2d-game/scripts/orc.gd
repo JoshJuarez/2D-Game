@@ -66,6 +66,7 @@ func die() -> void:
 	remove_from_group("enemy")
 	$CollisionShape2D.set_deferred("disabled", true)
 	$ContactArea/CollisionShape2D.set_deferred("disabled", true)
+	$Hurtbox/CollisionShape2D.set_deferred("disabled", true)
 	sprite.play("death")
 	await sprite.animation_finished
 	queue_free()

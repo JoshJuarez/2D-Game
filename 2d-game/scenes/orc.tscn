@@ -233,6 +233,9 @@ size = Vector2(20, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wxl"]
 size = Vector2(30, 17)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurt"]
+size = Vector2(28, 36)
+
 [node name="Orc" type="CharacterBody2D" unique_id=879571129]
 script = ExtResource("1_3xw0u")
 
@@ -250,3 +253,9 @@ shape = SubResource("RectangleShape2D_oypmb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ContactArea" unique_id=1868526194]
 position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_v2wxl")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1900300001]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1900300002]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_hurt")

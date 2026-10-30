@@ -96,9 +96,10 @@ func attack() -> void:
 	attack_cooldown = 0.4
 	sprite.play(look.attack)
 	action_time = 0.35
-	for body in hitbox.get_overlapping_bodies():
-		if body.is_in_group("enemy"):
-			body.take_damage(GameState.strength)
+	for area in hitbox.get_overlapping_areas():
+		var enemy = area.get_parent()
+		if area.name == "Hurtbox" and enemy.is_in_group("enemy"):
+			enemy.take_damage(GameState.strength)
 
 	if GameState.selected_class == "Mage":
 		shoot_fireball()
