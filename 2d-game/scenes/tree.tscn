@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://ddhwno0c24ybr"]
 
 [ext_resource type="Texture2D" uid="uid://dv2iiaudhwrwx" path="res://2d-game/assets/environment/Trees+.png" id="1_brfkd"]
+[ext_resource type="Script" uid="uid://cq4tree7w2k8n" path="res://2d-game/scripts/tree.gd" id="2_tree"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(61, 25)
 
 [node name="Tree" type="Node2D" unique_id=2109672123]
+script = ExtResource("2_tree")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=349413512]
 position = Vector2(38, 47)

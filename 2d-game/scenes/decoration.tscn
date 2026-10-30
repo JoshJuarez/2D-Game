@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cn6decor2v8ka"]
+
+[ext_resource type="Texture2D" uid="uid://dv2iiaudhwrwx" path="res://2d-game/assets/environment/Trees+.png" id="1_tex"]
+[ext_resource type="Script" uid="uid://bd8decor5m3qx" path="res://2d-game/scripts/decoration.gd" id="2_scr"]
+
+[node name="Decoration" type="Sprite2D" unique_id=1900000001]
+texture = ExtResource("1_tex")
+region_enabled = true
+region_rect = Rect2(639, 259, 30, 30)
+script = ExtResource("2_scr")
