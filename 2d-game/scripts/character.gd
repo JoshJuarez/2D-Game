@@ -81,7 +81,7 @@ func take_damage(amount: int) -> void:
 	var attacking = sprite.animation == look.attack and action_time > 0
 	if not attacking:
 		sprite.play(look.hurt)
-		action_time = 0.25
+		action_time = anim_length(look.hurt)
 
 	if health <= 0:
 		GameState.result_text = "You died on wave " + str(GameState.wave) + ", level " + str(GameState.level)
@@ -95,7 +95,7 @@ func enemy_defeated() -> void:
 func attack() -> void:
 	attack_cooldown = 0.4
 	sprite.play(look.attack)
-	action_time = 0.35
+	action_time = anim_length(look.attack)
 	for area in hitbox.get_overlapping_areas():
 		var enemy = area.get_parent()
 		if area.name == "Hurtbox" and enemy.is_in_group("enemy"):
@@ -114,3 +114,8 @@ func shoot_fireball() -> void:
 func _on_upgraded(stat: String) -> void:
 	if stat == "hp":
 		health = min(health + 25.0, GameState.max_hp)
+
+# How long an animation takes to play once, in seconds
+func anim_length(anim: String) -> float:
+	var frames = sprite.sprite_frames
+	return frames.get_frame_count(anim) / frames.get_animation_speed(anim)

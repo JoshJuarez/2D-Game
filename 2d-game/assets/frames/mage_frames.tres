@@ -412,7 +412,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"Attack",
-"speed": 7.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -511,7 +511,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"Hurt",
-"speed": 7.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -538,9 +538,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_upxsh")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -622,9 +622,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_58a5g")
 }],
-"loop": 0,
+"loop": true,
 "name": &"Run",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
