@@ -2,6 +2,7 @@ extends Node
 
 signal leveled_up(new_level)
 signal xp_changed(current_xp, xp_needed)
+signal upgraded
 
 const CLASSES = {
 	"Brawler":  {"max_hp": 150, "speed": 160, "strength": 15},
