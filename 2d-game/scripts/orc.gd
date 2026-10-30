@@ -10,6 +10,8 @@ var player: Node2D
 var recoil_time = 0.0
 var action_time = 0.0   # while above 0, an attack or hurt animation is playing
 var dead = false
+var knock_velocity = Vector2.ZERO
+var knock_time = 0.0   # while above 0, the orc is being blown back
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -23,6 +25,13 @@ func _physics_process(delta: float) -> void:
 
 	var direction = global_position.direction_to(player.global_position)
 	recoil_time -= delta
+
+	# Being blown back by the Mage's tornado: no chasing or attacking
+	knock_time -= delta
+	if knock_time > 0:
+		velocity = knock_velocity
+		move_and_slide()
+		return
 
 	if recoil_time > 0:
 		velocity = -direction * speed      # back away from the player
@@ -70,3 +79,10 @@ func die() -> void:
 	sprite.play("death")
 	await sprite.animation_finished
 	queue_free()
+
+# Called by the Mage's tornado
+func knockback(push: Vector2) -> void:
+	if dead:
+		return
+	knock_velocity = push
+	knock_time = 0.25

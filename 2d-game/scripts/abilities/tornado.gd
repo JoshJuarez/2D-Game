@@ -1,25 +1,26 @@
-
 extends Area2D
 
 @export var duration: float = 1.5
-@export var knockback_strength: float = 350.0
+@export var knockback_strength: float = 420.0
+
+var follow: Node2D   # the Mage; the tornado stays wrapped around her
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	sprite.play("Tornado")
-	body_entered.connect(_on_body_entered)
-
 	await get_tree().create_timer(duration).timeout
 	queue_free()
 
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("enemies") and body is CharacterBody2D:
-		var push_direction: float = sign(
-			body.global_position.x - global_position.x
-		)
+func _physics_process(_delta: float) -> void:
+	if is_instance_valid(follow):
+		global_position = follow.global_position
 
-		if push_direction == 0.0:
-			push_direction = 1.0
-
-		body.velocity.x = push_direction * knockback_strength
+	# Push every orc whose body is inside the tornado away from its center
+	for area in get_overlapping_areas():
+		var enemy = area.get_parent()
+		if area.name == "Hurtbox" and enemy.is_in_group("enemy"):
+			var away = global_position.direction_to(enemy.global_position)
+			if away == Vector2.ZERO:
+				away = Vector2.RIGHT
+			enemy.knockback(away * knockback_strength)

@@ -15,6 +15,7 @@ var look = {}
 var sprite: AnimatedSprite2D
 var hitbox: Area2D
 const FIREBALL = preload("res://2d-game/scenes/abilities/fire_ball.tscn")
+const TORNADO = preload("res://2d-game/scenes/abilities/tornado.tscn")
 var action_time = 0.0   # while above 0, an attack or hurt animation is playing
 var dying = false
 
@@ -26,6 +27,9 @@ const DASH_SPEED = 650.0
 var dash_time = 0.0
 var dash_cooldown = 0.0
 var dash_direction = Vector2.RIGHT
+
+# Mage tornado (right-click)
+var tornado_cooldown = 0.0
 
 func _ready() -> void:
 	add_to_group("player")
@@ -62,6 +66,11 @@ func _physics_process(delta: float) -> void:
 	dash_cooldown -= delta
 	if GameState.selected_class == "Assassin" and Input.is_action_just_pressed("dash") and dash_cooldown <= 0:
 		dash()
+
+	# Mage: right-click casts a tornado around her that blows orcs away
+	tornado_cooldown -= delta
+	if GameState.selected_class == "Mage" and Input.is_action_just_pressed("Block") and tornado_cooldown <= 0:
+		cast_tornado()
 
 	if dash_time > 0:
 		velocity = dash_direction * DASH_SPEED
@@ -127,6 +136,15 @@ func die() -> void:
 	sprite.play(look.death)
 	await get_tree().create_timer(anim_length(look.death) + 0.4).timeout
 	get_tree().change_scene_to_file("res://2d-game/scenes/result.tscn")
+
+func cast_tornado() -> void:
+	tornado_cooldown = 4.0
+	var tornado = TORNADO.instantiate()
+	tornado.follow = self
+	tornado.global_position = global_position
+	get_parent().add_child(tornado)
+	sprite.play("Push")
+	action_time = anim_length("Push")
 
 func dash() -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")

@@ -25,7 +25,7 @@ If you go 20 seconds without being hit, your health slowly regenerates.
 | --- | --- | --- | --- | --- |
 | **Brawler** (knight) | 150 | 160 | 15 | Tanky with the longest sword reach, and can **block**. Wins by outlasting. |
 | **Assassin** (hooded) | 80 | 260 | 15 | Fastest movement and attacks, and can **dash**. Darts in and out. |
-| **Mage** | 90 | 200 | 25 | Hits hardest, and every attack also launches a **fireball**. Dies fast. |
+| **Mage** | 90 | 200 | 25 | Hits hardest, every attack also launches a **fireball**, and she can cast a **tornado** to blow orcs away. Dies fast. |
 
 ### Controls
 
@@ -35,10 +35,11 @@ If you go 20 seconds without being hit, your health slowly regenerates.
 | Attack | Space or left mouse button |
 | Block (Brawler) | Hold right mouse button: can't move or attack, takes no damage |
 | Dash (Assassin) | Shift: quick dash in the direction you're moving, briefly invincible |
+| Tornado (Mage) | Right mouse button: a tornado wraps around her for 1.5 s and blows orcs away (4 s cooldown) |
 
 ### Aesthetic
 
-A traditional fantasy RPG look with an elves-and-woods feel, in 2D pixel art. The arena is a grassy forest clearing with varied trees, bushes, stumps and mushrooms. Characters and orcs are fully animated: idle, run, attack, hurt and death, plus the knight's block and the assassin's dash. Visual inspirations are classic Final Fantasy, and Hades for readable, punchy combat.
+A traditional fantasy RPG look with an elves-and-woods feel, in 2D pixel art. The arena is a grassy forest clearing with varied trees, bushes, stumps and mushrooms. Characters and orcs are fully animated: idle, run, attack, hurt and death, plus the knight's block, the assassin's dash and the mage's tornado. Visual inspirations are classic Final Fantasy, and Hades for readable, punchy combat.
 
 ## Who made what
 

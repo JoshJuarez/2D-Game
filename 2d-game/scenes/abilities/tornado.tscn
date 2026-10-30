@@ -43,21 +43,22 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Tornado",
-"speed": 5.0
+"speed": 12.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3y5c"]
-radius = 22.0
-height = 62.0
+[sub_resource type="CircleShape2D" id="CapsuleShape2D_j3y5c"]
+radius = 45.0
 
 [node name="Tornado" type="Area2D" unique_id=339801019]
 script = ExtResource("1_qf2pt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=343503478]
+position = Vector2(0, -12)
+scale = Vector2(0.9, 0.9)
+modulate = Color(1, 1, 1, 0.7)
 sprite_frames = SubResource("SpriteFrames_22g5b")
 animation = &"Tornado"
 autoplay = "Tornado"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=20751659]
-position = Vector2(231, 285)
 shape = SubResource("CapsuleShape2D_j3y5c")
