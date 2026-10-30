@@ -2,7 +2,7 @@
 
 A top-down 2D action roguelike set in an elven forest, made in Godot 4.
 
-**Team:** Joshua Juarez, Mahad Jamil, Zeinab
+**Team:** Joshua Juarez, Mahad Jamil, Zeinab Soumahoro II
 
 ## The Game
 
