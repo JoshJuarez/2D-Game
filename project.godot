@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2D-Game"
-run/main_scene="uid://cvp763u44uxky"
+run/main_scene="uid://c5iclv2f2er20"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]
