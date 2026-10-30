@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwsxd6d7ssqe3"]
 
-[ext_resource type="Script" uid="uid://b0carlj06u5df" path="res://Main/scripts/level_up.gd" id="1_u8jty"]
+[ext_resource type="Script" uid="uid://b0carlj06u5df" path="res://2d-game/scripts/level_up.gd" id="1_u8jty"]
 
 [node name="LevelUp" type="CanvasLayer" unique_id=2132028684]
 process_mode = 3

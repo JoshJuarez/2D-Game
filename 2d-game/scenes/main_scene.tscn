@@ -1,19 +1,40 @@
 [gd_scene format=3 uid="uid://cvp763u44uxky"]
 
-[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://2d-game/player_assets/Soldier.png" id="1_2c62f"]
 [ext_resource type="PackedScene" uid="uid://bwsxd6d7ssqe3" path="res://2d-game/scenes/level_up.tscn" id="1_y1g6j"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://2d-game/scripts/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://2d-game/scenes/tree.tscn" id="2_gyfs4"]
 [ext_resource type="Script" uid="uid://bq7m7crprs868" path="res://2d-game/scripts/wave_spawner.gd" id="5_y1g6j"]
+[ext_resource type="SpriteFrames" uid="uid://bk7n2qw5xr4me" path="res://2d-game/assets/frames/knight_frames.tres" id="6_knight"]
+[ext_resource type="SpriteFrames" uid="uid://cm3x8fj2qa6vt" path="res://2d-game/assets/frames/mage_frames.tres" id="7_mage"]
+[ext_resource type="SpriteFrames" uid="uid://dh5r1kp8w03yn" path="res://2d-game/assets/frames/hooded_frames.tres" id="8_hooded"]
+[ext_resource type="PackedScene" uid="uid://cn6decor2v8ka" path="res://2d-game/scenes/decoration.tscn" id="9_decor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oypmb"]
 size = Vector2(20, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2wxl"]
-size = Vector2(28, 38)
+size = Vector2(24, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqo2k"]
-size = Vector2(36, 16)
+size = Vector2(40, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mage1"]
+size = Vector2(9, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mage2"]
+size = Vector2(28, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6evki"]
+size = Vector2(28, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_assn1"]
+size = Vector2(22, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_assn2"]
+size = Vector2(36, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_denle"]
+size = Vector2(46, 13)
 
 [node name="Node2D" type="Node2D" unique_id=1200829281]
 y_sort_enabled = true
@@ -26,27 +47,71 @@ script = ExtResource("5_y1g6j")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673 groups=["player"]]
 script = ExtResource("2_d5x1h")
 
-[node name="Character_Sprite2D" type="Sprite2D" parent="Player" unique_id=64670256]
-scale = Vector2(1.79, 1.79)
-texture = ExtResource("1_2c62f")
-region_enabled = true
-region_rect = Rect2(0, 0, 100, 100)
+[node name="BrawlerSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502211]
+position = Vector2(0, -23.5)
+sprite_frames = ExtResource("6_knight")
+animation = &"Attack 1"
+frame = 6
+
+[node name="MageSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502212]
+visible = false
+position = Vector2(0, -9.1)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("7_mage")
+animation = &"Attack"
+
+[node name="AssassinSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502213]
+visible = false
+position = Vector2(0, -11.5)
+scale = Vector2(0.75, 0.75)
+sprite_frames = ExtResource("8_hooded")
+animation = &"Attack 1"
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=826521078]
 position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_oypmb")
 
-[node name="AttackHitbox" type="Area2D" parent="Player" unique_id=1453103284]
+[node name="BrawlerHitbox" type="Area2D" parent="Player" unique_id=1453103284]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackHitbox" unique_id=61225120]
-position = Vector2(23, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/BrawlerHitbox" unique_id=61225120]
+position = Vector2(21, -2.5)
 shape = SubResource("RectangleShape2D_v2wxl")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AttackHitbox" unique_id=400381195]
-position = Vector2(-8, 12)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/BrawlerHitbox" unique_id=400381195]
+position = Vector2(-10, 4)
 shape = SubResource("RectangleShape2D_aqo2k")
 
+[node name="MageHitbox" type="Area2D" parent="Player" unique_id=1834502221]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1834502222]
+position = Vector2(13.5, -5.5)
+shape = SubResource("RectangleShape2D_mage1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1834502223]
+position = Vector2(-4, 8.5)
+shape = SubResource("RectangleShape2D_mage2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/MageHitbox" unique_id=1897681579]
+position = Vector2(-4, -17)
+shape = SubResource("RectangleShape2D_6evki")
+
+[node name="AssassinHitbox" type="Area2D" parent="Player" unique_id=1834502231]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502232]
+position = Vector2(19, -2)
+shape = SubResource("RectangleShape2D_assn1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=1834502233]
+position = Vector2(-8, 9)
+shape = SubResource("RectangleShape2D_assn2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/AssassinHitbox" unique_id=568742824]
+position = Vector2(-3, -16.5)
+shape = SubResource("RectangleShape2D_denle")
+
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=725029376]
+zoom = Vector2(2, 2)
 
 [node name="Forrest" type="Node2D" parent="." unique_id=1538369128]
 y_sort_enabled = true
@@ -65,6 +130,165 @@ position = Vector2(0, 101)
 
 [node name="Tree5" parent="Forrest" unique_id=254478954 instance=ExtResource("2_gyfs4")]
 position = Vector2(124, -4)
+
+[node name="Tree6" parent="Forrest" unique_id=1900100000 instance=ExtResource("2_gyfs4")]
+position = Vector2(203, -494)
+
+[node name="Tree7" parent="Forrest" unique_id=1900100001 instance=ExtResource("2_gyfs4")]
+position = Vector2(-328, -288)
+
+[node name="Tree8" parent="Forrest" unique_id=1900100002 instance=ExtResource("2_gyfs4")]
+position = Vector2(344, 184)
+
+[node name="Tree9" parent="Forrest" unique_id=1900100003 instance=ExtResource("2_gyfs4")]
+position = Vector2(571, -430)
+
+[node name="Tree10" parent="Forrest" unique_id=1900100004 instance=ExtResource("2_gyfs4")]
+position = Vector2(-114, -489)
+
+[node name="Tree11" parent="Forrest" unique_id=1900100005 instance=ExtResource("2_gyfs4")]
+position = Vector2(-410, 6)
+
+[node name="Tree12" parent="Forrest" unique_id=1900100006 instance=ExtResource("2_gyfs4")]
+position = Vector2(-689, -313)
+
+[node name="Tree13" parent="Forrest" unique_id=1900100007 instance=ExtResource("2_gyfs4")]
+position = Vector2(-407, 93)
+
+[node name="Tree14" parent="Forrest" unique_id=1900100008 instance=ExtResource("2_gyfs4")]
+position = Vector2(451, -513)
+
+[node name="Tree15" parent="Forrest" unique_id=1900100009 instance=ExtResource("2_gyfs4")]
+position = Vector2(445, 206)
+
+[node name="Tree16" parent="Forrest" unique_id=1900100010 instance=ExtResource("2_gyfs4")]
+position = Vector2(-233, -358)
+
+[node name="Tree17" parent="Forrest" unique_id=1900100011 instance=ExtResource("2_gyfs4")]
+position = Vector2(666, -170)
+
+[node name="Decorations" type="Node2D" parent="." unique_id=1900100500]
+z_index = -1
+
+[node name="Decoration1" parent="Decorations" unique_id=1900100600 instance=ExtResource("9_decor")]
+position = Vector2(-593, -419)
+
+[node name="Decoration2" parent="Decorations" unique_id=1900100601 instance=ExtResource("9_decor")]
+position = Vector2(506, 108)
+
+[node name="Decoration3" parent="Decorations" unique_id=1900100602 instance=ExtResource("9_decor")]
+position = Vector2(447, 239)
+
+[node name="Decoration4" parent="Decorations" unique_id=1900100603 instance=ExtResource("9_decor")]
+position = Vector2(53, 492)
+
+[node name="Decoration5" parent="Decorations" unique_id=1900100604 instance=ExtResource("9_decor")]
+position = Vector2(-177, 54)
+
+[node name="Decoration6" parent="Decorations" unique_id=1900100605 instance=ExtResource("9_decor")]
+position = Vector2(298, -472)
+
+[node name="Decoration7" parent="Decorations" unique_id=1900100606 instance=ExtResource("9_decor")]
+position = Vector2(-396, -219)
+
+[node name="Decoration8" parent="Decorations" unique_id=1900100607 instance=ExtResource("9_decor")]
+position = Vector2(-612, -278)
+
+[node name="Decoration9" parent="Decorations" unique_id=1900100608 instance=ExtResource("9_decor")]
+position = Vector2(198, -141)
+
+[node name="Decoration10" parent="Decorations" unique_id=1900100609 instance=ExtResource("9_decor")]
+position = Vector2(-189, -302)
+
+[node name="Decoration11" parent="Decorations" unique_id=1900100610 instance=ExtResource("9_decor")]
+position = Vector2(-339, 454)
+
+[node name="Decoration12" parent="Decorations" unique_id=1900100611 instance=ExtResource("9_decor")]
+position = Vector2(216, 113)
+
+[node name="Decoration13" parent="Decorations" unique_id=1900100612 instance=ExtResource("9_decor")]
+position = Vector2(-479, 238)
+
+[node name="Decoration14" parent="Decorations" unique_id=1900100613 instance=ExtResource("9_decor")]
+position = Vector2(-490, -125)
+
+[node name="Decoration15" parent="Decorations" unique_id=1900100614 instance=ExtResource("9_decor")]
+position = Vector2(713, 146)
+
+[node name="Decoration16" parent="Decorations" unique_id=1900100615 instance=ExtResource("9_decor")]
+position = Vector2(83, 192)
+
+[node name="Decoration17" parent="Decorations" unique_id=1900100616 instance=ExtResource("9_decor")]
+position = Vector2(499, 287)
+
+[node name="Decoration18" parent="Decorations" unique_id=1900100617 instance=ExtResource("9_decor")]
+position = Vector2(-395, -487)
+
+[node name="Decoration19" parent="Decorations" unique_id=1900100618 instance=ExtResource("9_decor")]
+position = Vector2(-269, -242)
+
+[node name="Decoration20" parent="Decorations" unique_id=1900100619 instance=ExtResource("9_decor")]
+position = Vector2(-421, 461)
+
+[node name="Decoration21" parent="Decorations" unique_id=1900100620 instance=ExtResource("9_decor")]
+position = Vector2(548, -193)
+
+[node name="Decoration22" parent="Decorations" unique_id=1900100621 instance=ExtResource("9_decor")]
+position = Vector2(604, -43)
+
+[node name="Decoration23" parent="Decorations" unique_id=1900100622 instance=ExtResource("9_decor")]
+position = Vector2(-342, -264)
+
+[node name="Decoration24" parent="Decorations" unique_id=1900100623 instance=ExtResource("9_decor")]
+position = Vector2(89, -247)
+
+[node name="Decoration25" parent="Decorations" unique_id=1900100624 instance=ExtResource("9_decor")]
+position = Vector2(123, 414)
+
+[node name="Decoration26" parent="Decorations" unique_id=1900100625 instance=ExtResource("9_decor")]
+position = Vector2(724, 10)
+
+[node name="Decoration27" parent="Decorations" unique_id=1900100626 instance=ExtResource("9_decor")]
+position = Vector2(-568, 133)
+
+[node name="Decoration28" parent="Decorations" unique_id=1900100627 instance=ExtResource("9_decor")]
+position = Vector2(425, -81)
+
+[node name="Decoration29" parent="Decorations" unique_id=1900100628 instance=ExtResource("9_decor")]
+position = Vector2(-636, -123)
+
+[node name="Decoration30" parent="Decorations" unique_id=1900100629 instance=ExtResource("9_decor")]
+position = Vector2(686, 375)
+
+[node name="Decoration31" parent="Decorations" unique_id=1900100630 instance=ExtResource("9_decor")]
+position = Vector2(-711, 230)
+
+[node name="Decoration32" parent="Decorations" unique_id=1900100631 instance=ExtResource("9_decor")]
+position = Vector2(265, 38)
+
+[node name="Decoration33" parent="Decorations" unique_id=1900100632 instance=ExtResource("9_decor")]
+position = Vector2(-340, 147)
+
+[node name="Decoration34" parent="Decorations" unique_id=1900100633 instance=ExtResource("9_decor")]
+position = Vector2(-566, -68)
+
+[node name="Decoration35" parent="Decorations" unique_id=1900100634 instance=ExtResource("9_decor")]
+position = Vector2(-67, 472)
+
+[node name="Decoration36" parent="Decorations" unique_id=1900100635 instance=ExtResource("9_decor")]
+position = Vector2(1, -334)
+
+[node name="Decoration37" parent="Decorations" unique_id=1900100636 instance=ExtResource("9_decor")]
+position = Vector2(601, 385)
+
+[node name="Decoration38" parent="Decorations" unique_id=1900100637 instance=ExtResource("9_decor")]
+position = Vector2(159, -361)
+
+[node name="Decoration39" parent="Decorations" unique_id=1900100638 instance=ExtResource("9_decor")]
+position = Vector2(382, 41)
+
+[node name="Decoration40" parent="Decorations" unique_id=1900100639 instance=ExtResource("9_decor")]
+position = Vector2(-727, -183)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1759729349]
 

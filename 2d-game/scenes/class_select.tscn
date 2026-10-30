@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c5iclv2f2er20"]
+
+[ext_resource type="Script" uid="uid://vb8lltd245g5" path="res://2d-game/scripts/class_select.gd" id="1_vitwe"]
+
+[node name="ClassSelect" type="Control" unique_id=462334382]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vitwe")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=858693038]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1894266921]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1061045827]
+layout_mode = 2
+text = "Choose your class"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BrawlerButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1443665299]
+unique_name_in_owner = true
+layout_mode = 2
+text = "   Brawler: 150 HP, slow, 15 dmg   "
+
+[node name="AssassinButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=625808226]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Assassin: 80 HP, fast, 15 dmg"
+
+[node name="MageButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=614911052]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mage: 90 HP, 25 dmg"

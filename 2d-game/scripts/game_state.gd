@@ -5,9 +5,11 @@ signal xp_changed(current_xp, xp_needed)
 
 const CLASSES = {
 	"Brawler":  {"max_hp": 150, "speed": 160, "strength": 15},
-	"Assassin": {"max_hp": 80,  "speed": 260, "strength": 12},
+	"Assassin": {"max_hp": 80,  "speed": 260, "strength": 15},
 	"Mage":     {"max_hp": 90,  "speed": 200, "strength": 25},
 }
+
+const TOTAL_WAVES = 5
 
 var selected_class = "Brawler"
 var max_hp = 0
@@ -16,11 +18,18 @@ var strength = 0
 var xp = 0
 var level = 1
 var wave = 0
+var result_text = ""
 
 signal upgraded(stat)
 
 func _ready() -> void:
 	start_run(selected_class)
+	# Shift = dash (Assassin)
+	if not InputMap.has_action("dash"):
+		InputMap.add_action("dash")
+		var shift = InputEventKey.new()
+		shift.physical_keycode = KEY_SHIFT
+		InputMap.action_add_event("dash", shift)
 
 # Resets everything for a fresh run with the chosen class
 func start_run(chosen_class: String) -> void:
