@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0u6gbqejl0a3"
-path="res://.godot/imported/Extra attack animation - version 2 - without flame - spritesheet.png-06b15e3789393874320143d4f7f74364.ctex"
+path="res://.godot/imported/Extra attack animation - version 2 - without flame - spritesheet.png-e96d3c8f619db0032b4aadfeef486871.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/mage/Extra attack animation/Extra attack animation - version 2 - without flame - spritesheet.png"
-dest_files=["res://.godot/imported/Extra attack animation - version 2 - without flame - spritesheet.png-06b15e3789393874320143d4f7f74364.ctex"]
+dest_files=["res://.godot/imported/Extra attack animation - version 2 - without flame - spritesheet.png-e96d3c8f619db0032b4aadfeef486871.ctex"]
 
 [params]
 

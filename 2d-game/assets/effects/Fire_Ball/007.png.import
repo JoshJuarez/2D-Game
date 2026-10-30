@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duuyxyx2tupyw"
-path="res://.godot/imported/007.png-7d93338809faf0c1c6e11c27770dda9d.ctex"
+path="res://.godot/imported/007.png-6734c914f20a78bd7cea2ff948f1cab9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Fire_Ball/007.png"
-dest_files=["res://.godot/imported/007.png-7d93338809faf0c1c6e11c27770dda9d.ctex"]
+dest_files=["res://.godot/imported/007.png-6734c914f20a78bd7cea2ff948f1cab9.ctex"]
 
 [params]
 

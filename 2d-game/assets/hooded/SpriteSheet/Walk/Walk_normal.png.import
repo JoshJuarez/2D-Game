@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v8ye8v2wdc1p"
-path="res://.godot/imported/Walk_normal.png-20da0325ef2ee947ccae1dd8ec43af7f.ctex"
+path="res://.godot/imported/Walk_normal.png-d41e3ebe08a3215d142b0fe9ae1207e0.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Walk/Walk_normal.png"
-dest_files=["res://.godot/imported/Walk_normal.png-20da0325ef2ee947ccae1dd8ec43af7f.ctex"]
+dest_files=["res://.godot/imported/Walk_normal.png-d41e3ebe08a3215d142b0fe9ae1207e0.ctex"]
 
 [params]
 

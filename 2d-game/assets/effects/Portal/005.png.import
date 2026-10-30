@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xd8ghol23plr"
-path="res://.godot/imported/005.png-bb2b80b9b55b5b5f7dca685591cffe5e.ctex"
+path="res://.godot/imported/005.png-21fd0a200e0073194bf67bd6caeb019d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Portal/005.png"
-dest_files=["res://.godot/imported/005.png-bb2b80b9b55b5b5f7dca685591cffe5e.ctex"]
+dest_files=["res://.godot/imported/005.png-21fd0a200e0073194bf67bd6caeb019d.ctex"]
 
 [params]
 

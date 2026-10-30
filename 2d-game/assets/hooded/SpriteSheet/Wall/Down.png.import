@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2gtf6pkqs7se"
-path="res://.godot/imported/Down.png-b04119b896bd0a03051a3c40d4bafaf8.ctex"
+path="res://.godot/imported/Down.png-bbbcdb935c852a42c0d3f29f1c82df50.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Wall/Down.png"
-dest_files=["res://.godot/imported/Down.png-b04119b896bd0a03051a3c40d4bafaf8.ctex"]
+dest_files=["res://.godot/imported/Down.png-bbbcdb935c852a42c0d3f29f1c82df50.ctex"]
 
 [params]
 

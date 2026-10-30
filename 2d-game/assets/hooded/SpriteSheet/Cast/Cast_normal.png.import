@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lryrtejalt6v"
-path="res://.godot/imported/Cast_normal.png-d9359f43c08ac26d235520592b6e09b1.ctex"
+path="res://.godot/imported/Cast_normal.png-8466cd694fde26d46b44b5205f620ead.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Cast/Cast_normal.png"
-dest_files=["res://.godot/imported/Cast_normal.png-d9359f43c08ac26d235520592b6e09b1.ctex"]
+dest_files=["res://.godot/imported/Cast_normal.png-8466cd694fde26d46b44b5205f620ead.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djbwhpte6vpw"
-path="res://.godot/imported/Up_normal.png-c005d77fb1501d8150af51172bf770e2.ctex"
+path="res://.godot/imported/Up_normal.png-a967aea7ff6466461cb709282edd2c55.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Wall/NormalMaps/Up_normal.png"
-dest_files=["res://.godot/imported/Up_normal.png-c005d77fb1501d8150af51172bf770e2.ctex"]
+dest_files=["res://.godot/imported/Up_normal.png-a967aea7ff6466461cb709282edd2c55.ctex"]
 
 [params]
 

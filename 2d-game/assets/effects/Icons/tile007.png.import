@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgcohdrjctf8l"
-path="res://.godot/imported/tile007.png-145de2a732d35f4bb0158bdc57df9aa8.ctex"
+path="res://.godot/imported/tile007.png-1cc54740e5376b253c539282149e4d8d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Icons/tile007.png"
-dest_files=["res://.godot/imported/tile007.png-145de2a732d35f4bb0158bdc57df9aa8.ctex"]
+dest_files=["res://.godot/imported/tile007.png-1cc54740e5376b253c539282149e4d8d.ctex"]
 
 [params]
 

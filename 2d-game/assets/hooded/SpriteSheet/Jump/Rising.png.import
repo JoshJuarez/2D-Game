@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dewe3tyw0et2v"
-path="res://.godot/imported/Rising.png-b5ab8462ae83d995200fccde5636fba2.ctex"
+path="res://.godot/imported/Rising.png-fb0c6d9f1622d03279a60c21ef6198d5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Jump/Rising.png"
-dest_files=["res://.godot/imported/Rising.png-b5ab8462ae83d995200fccde5636fba2.ctex"]
+dest_files=["res://.godot/imported/Rising.png-fb0c6d9f1622d03279a60c21ef6198d5.ctex"]
 
 [params]
 

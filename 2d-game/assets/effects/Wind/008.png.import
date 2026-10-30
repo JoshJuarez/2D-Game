@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfgivy8k6wgsu"
-path="res://.godot/imported/008.png-d8a9e42faf76a0068651d7da376be3e4.ctex"
+path="res://.godot/imported/008.png-7966621a789609489a8d04926ce5f685.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Wind/008.png"
-dest_files=["res://.godot/imported/008.png-d8a9e42faf76a0068651d7da376be3e4.ctex"]
+dest_files=["res://.godot/imported/008.png-7966621a789609489a8d04926ce5f685.ctex"]
 
 [params]
 

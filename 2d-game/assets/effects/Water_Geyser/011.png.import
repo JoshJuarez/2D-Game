@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq1c08i2du4bp"
-path="res://.godot/imported/011.png-f47bcbd6291d495dc8612ea9a4914919.ctex"
+path="res://.godot/imported/011.png-d2031cc57d751ab1010e35eab49b067c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Water_Geyser/011.png"
-dest_files=["res://.godot/imported/011.png-f47bcbd6291d495dc8612ea9a4914919.ctex"]
+dest_files=["res://.godot/imported/011.png-d2031cc57d751ab1010e35eab49b067c.ctex"]
 
 [params]
 

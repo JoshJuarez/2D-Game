@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5gfy0biwjc20"
-path="res://.godot/imported/Mage - walk animation - spritesheet.png-063767a65a4d09e8f759e254f3314e48.ctex"
+path="res://.godot/imported/Mage - walk animation - spritesheet.png-5f17a137bb3a41d4594c817518d78226.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/mage/Walk animation/Mage - walk animation - spritesheet.png"
-dest_files=["res://.godot/imported/Mage - walk animation - spritesheet.png-063767a65a4d09e8f759e254f3314e48.ctex"]
+dest_files=["res://.godot/imported/Mage - walk animation - spritesheet.png-5f17a137bb3a41d4594c817518d78226.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://betchox4x7wb5"
-path="res://.godot/imported/001.png-bfd61abf2593d6b84d64bca7ffba6bc7.ctex"
+path="res://.godot/imported/001.png-2f1625009761ffef8594d28e9e47ab50.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Water/001.png"
-dest_files=["res://.godot/imported/001.png-bfd61abf2593d6b84d64bca7ffba6bc7.ctex"]
+dest_files=["res://.godot/imported/001.png-2f1625009761ffef8594d28e9e47ab50.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca34h2aeuovsc"
-path="res://.godot/imported/Run.png-9056f775d556e0b4bb6915022a2e72a6.ctex"
+path="res://.godot/imported/Run.png-2c16c86ea6377ce87cb8b60b518539db.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Run/Run.png"
-dest_files=["res://.godot/imported/Run.png-9056f775d556e0b4bb6915022a2e72a6.ctex"]
+dest_files=["res://.godot/imported/Run.png-2c16c86ea6377ce87cb8b60b518539db.ctex"]
 
 [params]
 

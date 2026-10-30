@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://divixt7i7rwtp"
-path="res://.godot/imported/001.png-a829f98b8fb948aae28c0c0628176191.ctex"
+path="res://.godot/imported/001.png-986f2e594e7e8bec6a44585a634f54ce.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Rocks/001.png"
-dest_files=["res://.godot/imported/001.png-a829f98b8fb948aae28c0c0628176191.ctex"]
+dest_files=["res://.godot/imported/001.png-986f2e594e7e8bec6a44585a634f54ce.ctex"]
 
 [params]
 

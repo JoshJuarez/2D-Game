@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w1n460s3xvjr"
-path="res://.godot/imported/Mage - climb animation version 2 - spritesheet.png-5de8b79c91ad127ce14877e021e35534.ctex"
+path="res://.godot/imported/Mage - climb animation version 2 - spritesheet.png-d74ff7dbbe4ca0754858a14a9e54046a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/mage/Climb animation/Mage - climb animation version 2 - spritesheet.png"
-dest_files=["res://.godot/imported/Mage - climb animation version 2 - spritesheet.png-5de8b79c91ad127ce14877e021e35534.ctex"]
+dest_files=["res://.godot/imported/Mage - climb animation version 2 - spritesheet.png-d74ff7dbbe4ca0754858a14a9e54046a.ctex"]
 
 [params]
 

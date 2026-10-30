@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bprxb1tcv8u7j"
-path="res://.godot/imported/002.png-124880fe96e39635bc311b5d878db4fc.ctex"
+path="res://.godot/imported/002.png-7b65d59a547b5277f569fb9e42fa07bb.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Tornado/002.png"
-dest_files=["res://.godot/imported/002.png-124880fe96e39635bc311b5d878db4fc.ctex"]
+dest_files=["res://.godot/imported/002.png-7b65d59a547b5277f569fb9e42fa07bb.ctex"]
 
 [params]
 

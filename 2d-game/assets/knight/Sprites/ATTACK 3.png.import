@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b61ygjte2qnub"
-path="res://.godot/imported/ATTACK 3.png-8d43ded1295e7ccaea972a5b33bb6f16.ctex"
+path="res://.godot/imported/ATTACK 3.png-a8964de5dcbe909fab652a1d54c6ca78.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/knight/Sprites/ATTACK 3.png"
-dest_files=["res://.godot/imported/ATTACK 3.png-8d43ded1295e7ccaea972a5b33bb6f16.ctex"]
+dest_files=["res://.godot/imported/ATTACK 3.png-a8964de5dcbe909fab652a1d54c6ca78.ctex"]
 
 [params]
 

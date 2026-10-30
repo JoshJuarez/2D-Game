@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cctxs5a4vkfab"
-path="res://.godot/imported/Mage - high jump animation - spritesheet.png-f158eff91445b11fc140ad47d7efd01b.ctex"
+path="res://.godot/imported/Mage - high jump animation - spritesheet.png-ab86fa3654c043149e4e79da2b21f7fd.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/mage/High Jump animation/Mage - high jump animation - spritesheet.png"
-dest_files=["res://.godot/imported/Mage - high jump animation - spritesheet.png-f158eff91445b11fc140ad47d7efd01b.ctex"]
+dest_files=["res://.godot/imported/Mage - high jump animation - spritesheet.png-ab86fa3654c043149e4e79da2b21f7fd.ctex"]
 
 [params]
 

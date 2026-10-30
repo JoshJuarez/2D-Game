@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d15rhk768poix"
-path="res://.godot/imported/004.png-ea03c01a5858665c93cbf379f62a48fc.ctex"
+path="res://.godot/imported/004.png-45deeae460fa2bea7f24b7f03f33eef3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Water/004.png"
-dest_files=["res://.godot/imported/004.png-ea03c01a5858665c93cbf379f62a48fc.ctex"]
+dest_files=["res://.godot/imported/004.png-45deeae460fa2bea7f24b7f03f33eef3.ctex"]
 
 [params]
 

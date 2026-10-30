@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwfota1fqvqpg"
-path="res://.godot/imported/007.png-1efdc2d16740fa00e731a1a80dd28745.ctex"
+path="res://.godot/imported/007.png-630c9f45be7986043430696c1cecf54f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Explosion/007.png"
-dest_files=["res://.godot/imported/007.png-1efdc2d16740fa00e731a1a80dd28745.ctex"]
+dest_files=["res://.godot/imported/007.png-630c9f45be7986043430696c1cecf54f.ctex"]
 
 [params]
 

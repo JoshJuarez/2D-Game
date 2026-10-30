@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdvk5jxcxtsyh"
-path="res://.godot/imported/frame_1_delay-0.1s.png-69bc3c46410d025a66147b74062ad4b2.ctex"
+path="res://.godot/imported/frame_1_delay-0.1s.png-5023b1e1cb1de022550419280970fa7f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/mage/Attack animation/Attack animation - without flame/frame_1_delay-0.1s.png"
-dest_files=["res://.godot/imported/frame_1_delay-0.1s.png-69bc3c46410d025a66147b74062ad4b2.ctex"]
+dest_files=["res://.godot/imported/frame_1_delay-0.1s.png-5023b1e1cb1de022550419280970fa7f.ctex"]
 
 [params]
 

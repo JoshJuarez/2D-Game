@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boc26npw14m1v"
-path="res://.godot/imported/DEATH.png-2836320a3f0e7c2df3a3d58e7b0af56f.ctex"
+path="res://.godot/imported/DEATH.png-49d2d8b619f4b4d6cd518f35a5c33851.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/knight/Sprites/DEATH.png"
-dest_files=["res://.godot/imported/DEATH.png-2836320a3f0e7c2df3a3d58e7b0af56f.ctex"]
+dest_files=["res://.godot/imported/DEATH.png-49d2d8b619f4b4d6cd518f35a5c33851.ctex"]
 
 [params]
 

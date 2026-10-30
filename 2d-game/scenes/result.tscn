@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ddgd00wx61atp"]
 
+[ext_resource type="Script" uid="uid://dpjsypo3x35kl" path="res://2d-game/scripts/result.gd" id="1_hmmpn"]
+
 [node name="Result" type="Control" unique_id=1637578126]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hmmpn")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=303012724]
 layout_mode = 1

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deudlx8bfuoiu"
-path="res://.godot/imported/ParryCounter_normal.png-75012cf23eff5ee18290bc5fc090f4ca.ctex"
+path="res://.godot/imported/ParryCounter_normal.png-5efc9e803d4780c5afc8164485af15cb.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Parry/NormalMaps/ParryCounter_normal.png"
-dest_files=["res://.godot/imported/ParryCounter_normal.png-75012cf23eff5ee18290bc5fc090f4ca.ctex"]
+dest_files=["res://.godot/imported/ParryCounter_normal.png-5efc9e803d4780c5afc8164485af15cb.ctex"]
 
 [params]
 

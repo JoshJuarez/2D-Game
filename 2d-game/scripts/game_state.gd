@@ -9,6 +9,8 @@ const CLASSES = {
 	"Mage":     {"max_hp": 90,  "speed": 200, "strength": 25},
 }
 
+const TOTAL_WAVES = 5
+
 var selected_class = "Brawler"
 var max_hp = 0
 var speed = 0

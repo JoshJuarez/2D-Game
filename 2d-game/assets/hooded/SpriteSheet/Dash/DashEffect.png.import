@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgaq6u6mytjj2"
-path="res://.godot/imported/DashEffect.png-1dafa82999934aa5e1375270a4d090c3.ctex"
+path="res://.godot/imported/DashEffect.png-86d8f880b83f67658622296ccfca2089.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Dash/DashEffect.png"
-dest_files=["res://.godot/imported/DashEffect.png-1dafa82999934aa5e1375270a4d090c3.ctex"]
+dest_files=["res://.godot/imported/DashEffect.png-86d8f880b83f67658622296ccfca2089.ctex"]
 
 [params]
 

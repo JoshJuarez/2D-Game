@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceor06ct7w4en"
-path="res://.godot/imported/StrongAttackEffect_normal.png-c7834b5387a20f4adedf1de59da5b128.ctex"
+path="res://.godot/imported/StrongAttackEffect_normal.png-a789d954a3dce89d1770565ebabeb493.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Attack/NormalMaps/StrongAttackEffect_normal.png"
-dest_files=["res://.godot/imported/StrongAttackEffect_normal.png-c7834b5387a20f4adedf1de59da5b128.ctex"]
+dest_files=["res://.godot/imported/StrongAttackEffect_normal.png-a789d954a3dce89d1770565ebabeb493.ctex"]
 
 [params]
 

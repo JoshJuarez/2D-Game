@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0sddoseoy8le"
-path="res://.godot/imported/Attack2.png-c3e913eb048bc8d5ae316373fe5d66ac.ctex"
+path="res://.godot/imported/Attack2.png-6aa92d1cffda01ba75a2806762af543d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Attack/Attack2.png"
-dest_files=["res://.godot/imported/Attack2.png-c3e913eb048bc8d5ae316373fe5d66ac.ctex"]
+dest_files=["res://.godot/imported/Attack2.png-6aa92d1cffda01ba75a2806762af543d.ctex"]
 
 [params]
 

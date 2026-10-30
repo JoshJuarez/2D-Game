@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c5iclv2f2er20"]
 
+[ext_resource type="Script" uid="uid://vb8lltd245g5" path="res://2d-game/scripts/class_select.gd" id="1_vitwe"]
+
 [node name="ClassSelect" type="Control" unique_id=462334382]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vitwe")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=858693038]
 layout_mode = 1

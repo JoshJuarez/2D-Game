@@ -38,6 +38,7 @@ func _physics_process(delta: float) -> void:
 	
 
 func take_damage(amount: int) -> void:
+	if health <= 0: return
 	health -= amount
 	recoil_time = 0.2
 	if(health <= 0):

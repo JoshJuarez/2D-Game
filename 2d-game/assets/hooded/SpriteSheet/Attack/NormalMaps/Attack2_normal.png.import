@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://debor2xleyu5f"
-path="res://.godot/imported/Attack2_normal.png-b728ad9116b0f0df144757d59e63fb99.ctex"
+path="res://.godot/imported/Attack2_normal.png-c898b3a7e706842aff4d5f75413355e3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Attack/NormalMaps/Attack2_normal.png"
-dest_files=["res://.godot/imported/Attack2_normal.png-b728ad9116b0f0df144757d59e63fb99.ctex"]
+dest_files=["res://.godot/imported/Attack2_normal.png-c898b3a7e706842aff4d5f75413355e3.ctex"]
 
 [params]
 

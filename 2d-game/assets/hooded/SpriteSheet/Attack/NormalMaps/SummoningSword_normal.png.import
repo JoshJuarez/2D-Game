@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs3nfdppt4kx7"
-path="res://.godot/imported/SummoningSword_normal.png-84c9a8b867a5d0d2522b3ca4949af068.ctex"
+path="res://.godot/imported/SummoningSword_normal.png-8065ad52461c858f14d94819426dffb4.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Attack/NormalMaps/SummoningSword_normal.png"
-dest_files=["res://.godot/imported/SummoningSword_normal.png-84c9a8b867a5d0d2522b3ca4949af068.ctex"]
+dest_files=["res://.godot/imported/SummoningSword_normal.png-8065ad52461c858f14d94819426dffb4.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxo7q6xidk0rr"
-path="res://.godot/imported/Idle.png-b52e11ccdfd63909bea6d9ddd4b085e5.ctex"
+path="res://.godot/imported/Idle.png-a632cf4fd9f102414397fc3fbc8eea4b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Idle/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-b52e11ccdfd63909bea6d9ddd4b085e5.ctex"]
+dest_files=["res://.godot/imported/Idle.png-a632cf4fd9f102414397fc3fbc8eea4b.ctex"]
 
 [params]
 

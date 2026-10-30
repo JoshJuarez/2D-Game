@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0i6krsrflha8"
-path="res://.godot/imported/002.png-63770cfab608da296a514cf558a9db1b.ctex"
+path="res://.godot/imported/002.png-e96e6bcfc3e732a3343017ae073c8c67.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/effects/Earth_Spike/002.png"
-dest_files=["res://.godot/imported/002.png-63770cfab608da296a514cf558a9db1b.ctex"]
+dest_files=["res://.godot/imported/002.png-e96e6bcfc3e732a3343017ae073c8c67.ctex"]
 
 [params]
 

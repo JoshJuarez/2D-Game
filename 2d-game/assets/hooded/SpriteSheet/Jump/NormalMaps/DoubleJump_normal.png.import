@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dckb8lvhyyag4"
-path="res://.godot/imported/DoubleJump_normal.png-22d1abfedd30aa4f9266c6eda9374dfd.ctex"
+path="res://.godot/imported/DoubleJump_normal.png-715b5cb0785f1acf903a1da42e2f2ec3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://2d-game/assets/hooded/SpriteSheet/Jump/NormalMaps/DoubleJump_normal.png"
-dest_files=["res://.godot/imported/DoubleJump_normal.png-22d1abfedd30aa4f9266c6eda9374dfd.ctex"]
+dest_files=["res://.godot/imported/DoubleJump_normal.png-715b5cb0785f1acf903a1da42e2f2ec3.ctex"]
 
 [params]
 
