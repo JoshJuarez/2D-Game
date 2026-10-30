@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cvp763u44uxky"]
 
-[ext_resource type="Texture2D" uid="uid://fk2njld6s5py" path="res://2d-game/assets/soldier/Soldier.png" id="1_2c62f"]
+[ext_resource type="SpriteFrames" uid="uid://bk7n2qw5xr4me" path="res://2d-game/assets/frames/knight_frames.tres" id="6_knight"]
+[ext_resource type="SpriteFrames" uid="uid://cm3x8fj2qa6vt" path="res://2d-game/assets/frames/mage_frames.tres" id="7_mage"]
+[ext_resource type="SpriteFrames" uid="uid://dh5r1kp8wz3yn" path="res://2d-game/assets/frames/hooded_frames.tres" id="8_hooded"]
 [ext_resource type="PackedScene" uid="uid://bwsxd6d7ssqe3" path="res://2d-game/scenes/level_up.tscn" id="1_y1g6j"]
 [ext_resource type="Script" uid="uid://800jxrlylfp7" path="res://2d-game/scripts/character.gd" id="2_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://ddhwno0c24ybr" path="res://2d-game/scenes/tree.tscn" id="2_gyfs4"]
@@ -26,11 +28,24 @@ script = ExtResource("5_y1g6j")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1478932673 groups=["player"]]
 script = ExtResource("2_d5x1h")
 
-[node name="Character_Sprite2D" type="Sprite2D" parent="Player" unique_id=64670256]
-scale = Vector2(1.79, 1.79)
-texture = ExtResource("1_2c62f")
-region_enabled = true
-region_rect = Rect2(0, 0, 100, 100)
+[node name="BrawlerSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502211]
+position = Vector2(0, -23.5)
+sprite_frames = ExtResource("6_knight")
+animation = &"idle"
+
+[node name="MageSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502212]
+visible = false
+position = Vector2(0, -9.1)
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("7_mage")
+animation = &"Idle"
+
+[node name="AssassinSprite" type="AnimatedSprite2D" parent="Player" unique_id=1834502213]
+visible = false
+position = Vector2(0, -11.5)
+scale = Vector2(0.75, 0.75)
+sprite_frames = ExtResource("8_hooded")
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=826521078]
 position = Vector2(0, 10.5)
