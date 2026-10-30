@@ -24,6 +24,12 @@ signal upgraded(stat)
 
 func _ready() -> void:
 	start_run(selected_class)
+	# Shift = dash (Assassin)
+	if not InputMap.has_action("dash"):
+		InputMap.add_action("dash")
+		var shift = InputEventKey.new()
+		shift.physical_keycode = KEY_SHIFT
+		InputMap.action_add_event("dash", shift)
 
 # Resets everything for a fresh run with the chosen class
 func start_run(chosen_class: String) -> void:

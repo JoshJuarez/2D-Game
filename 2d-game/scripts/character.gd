@@ -7,15 +7,25 @@ var invincible_time = 0.0
 
 # Mahad's characters: which sprite each class uses and its animation names
 const LOOKS = {
-	"Brawler":  {"node": "BrawlerSprite",  "hitbox": "BrawlerHitbox",  "cooldown": 0.45, "idle": "idle", "run": "run", "attack": "Attack 1", "hurt": "Hurt"},
-	"Mage":     {"node": "MageSprite",     "hitbox": "MageHitbox",     "cooldown": 0.5,  "idle": "Idle", "run": "Run", "attack": "Attack",   "hurt": "Hurt"},
-	"Assassin": {"node": "AssassinSprite", "hitbox": "AssassinHitbox", "cooldown": 0.25, "idle": "Idle", "run": "run", "attack": "Attack 1", "hurt": "hurt"},
+	"Brawler":  {"node": "BrawlerSprite",  "hitbox": "BrawlerHitbox",  "cooldown": 0.45, "idle": "idle", "run": "run", "attack": "Attack 1", "hurt": "Hurt", "death": "Death"},
+	"Mage":     {"node": "MageSprite",     "hitbox": "MageHitbox",     "cooldown": 0.5,  "idle": "Idle", "run": "Run", "attack": "Attack",   "hurt": "Hurt", "death": "Death"},
+	"Assassin": {"node": "AssassinSprite", "hitbox": "AssassinHitbox", "cooldown": 0.25, "idle": "Idle", "run": "run", "attack": "Attack 1", "hurt": "hurt", "death": "Death"},
 }
 var look = {}
 var sprite: AnimatedSprite2D
 var hitbox: Area2D
 const FIREBALL = preload("res://2d-game/scenes/abilities/fire_ball.tscn")
 var action_time = 0.0   # while above 0, an attack or hurt animation is playing
+var dying = false
+
+# Brawler block (hold right-click)
+var blocking = false
+
+# Assassin dash (Shift)
+const DASH_SPEED = 650.0
+var dash_time = 0.0
+var dash_cooldown = 0.0
+var dash_direction = Vector2.RIGHT
 
 func _ready() -> void:
 	add_to_group("player")
@@ -39,8 +49,26 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
+	if dying:
+		return
+
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * GameState.speed
+
+	# Brawler: hold right-click to block. Can't move or attack, takes no damage.
+	blocking = GameState.selected_class == "Brawler" and Input.is_action_pressed("Block")
+
+	# Assassin: Shift dashes in the direction you're moving, briefly invincible
+	dash_time -= delta
+	dash_cooldown -= delta
+	if GameState.selected_class == "Assassin" and Input.is_action_just_pressed("dash") and dash_cooldown <= 0:
+		dash()
+
+	if dash_time > 0:
+		velocity = dash_direction * DASH_SPEED
+	elif blocking:
+		velocity = Vector2.ZERO
+	else:
+		velocity = direction * GameState.speed
 	move_and_slide()
 	
 	attack_cooldown -= delta
@@ -50,13 +78,17 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = direction.x < 0
 		hitbox.scale.x = -1 if direction.x < 0 else 1
 
-	if Input.is_action_just_pressed("attack") and attack_cooldown <= 0:
+	if Input.is_action_just_pressed("attack") and attack_cooldown <= 0 and not blocking:
 		attack()
 
-	# Animations: attack/hurt play out first, otherwise run or idle
+	# Animations: attack/hurt/dash play out first, then block, otherwise run or idle
 	action_time -= delta
 	if action_time <= 0:
-		sprite.play(look.run if direction != Vector2.ZERO else look.idle)
+		if blocking:
+			if sprite.animation != "Block":
+				sprite.play("Block")   # plays once, then holds the shield up
+		else:
+			sprite.play(look.run if direction != Vector2.ZERO else look.idle)
 	
 	time_since_hit += delta 
 	if time_since_hit >= 20.0 and health > 0:
@@ -71,7 +103,7 @@ func _physics_process(delta: float) -> void:
 	get_node("../CanvasLayer/wave label").text = "Wave " + str(GameState.wave) + " / " + str(GameState.TOTAL_WAVES)
 	
 func take_damage(amount: int) -> void:
-	if invincible_time > 0:
+	if dying or invincible_time > 0 or blocking:
 		return
 
 	health = max(health - amount, 0.0)
@@ -84,11 +116,31 @@ func take_damage(amount: int) -> void:
 		action_time = anim_length(look.hurt)
 
 	if health <= 0:
-		GameState.result_text = "You died on wave " + str(GameState.wave) + ", level " + str(GameState.level)
-		get_tree().change_scene_to_file("res://2d-game/scenes/result.tscn")	
+		die()
+
+func die() -> void:
+	dying = true
+	velocity = Vector2.ZERO
+	GameState.result_text = "You died on wave " + str(GameState.wave) + ", level " + str(GameState.level)
+	get_node("../CanvasLayer/HP bar").value = 0
+	get_node("../CanvasLayer/health label").text = "0 / " + str(GameState.max_hp)
+	sprite.play(look.death)
+	await get_tree().create_timer(anim_length(look.death) + 0.4).timeout
+	get_tree().change_scene_to_file("res://2d-game/scenes/result.tscn")
+
+func dash() -> void:
+	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if direction == Vector2.ZERO:
+		direction = Vector2.LEFT if sprite.flip_h else Vector2.RIGHT
+	dash_direction = direction.normalized()
+	dash_time = 0.18
+	dash_cooldown = 0.8
+	invincible_time = max(invincible_time, 0.25)   # dodge through orcs
+	sprite.play("dash")
+	action_time = 0.18
 		
 func enemy_defeated() -> void:
-	if health > 0:
+	if health > 0 and not dying:
 		health = min(health + 5.0, GameState.max_hp)
 		GameState.add_xp(1)
 		
