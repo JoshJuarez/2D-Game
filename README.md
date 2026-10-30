@@ -23,8 +23,8 @@ If you go 20 seconds without being hit, your health slowly regenerates.
 
 | Class | HP | Speed | Strength | Playstyle |
 | --- | --- | --- | --- | --- |
-| **Brawler** (knight) | 150 | 160 | 15 | Tanky with the longest sword reach. Wins by outlasting. |
-| **Assassin** (hooded) | 80 | 260 | 15 | Fastest movement and attacks. Darts in and out. |
+| **Brawler** (knight) | 150 | 160 | 15 | Tanky with the longest sword reach, and can **block**. Wins by outlasting. |
+| **Assassin** (hooded) | 80 | 260 | 15 | Fastest movement and attacks, and can **dash**. Darts in and out. |
 | **Mage** | 90 | 200 | 25 | Hits hardest, and every attack also launches a **fireball**. Dies fast. |
 
 ### Controls
@@ -33,10 +33,12 @@ If you go 20 seconds without being hit, your health slowly regenerates.
 | --- | --- |
 | Move | WASD or arrow keys |
 | Attack | Space or left mouse button |
+| Block (Brawler) | Hold right mouse button: can't move or attack, takes no damage |
+| Dash (Assassin) | Shift: quick dash in the direction you're moving, briefly invincible |
 
 ### Aesthetic
 
-A traditional fantasy RPG look with an elves-and-woods feel, in 2D pixel art. The arena is a grassy forest clearing with varied trees, bushes, stumps and mushrooms. Characters and orcs are fully animated: idle, run, attack, hurt and death. Visual inspirations are classic Final Fantasy, and Hades for readable, punchy combat.
+A traditional fantasy RPG look with an elves-and-woods feel, in 2D pixel art. The arena is a grassy forest clearing with varied trees, bushes, stumps and mushrooms. Characters and orcs are fully animated: idle, run, attack, hurt and death, plus the knight's block and the assassin's dash. Visual inspirations are classic Final Fantasy, and Hades for readable, punchy combat.
 
 ## Who made what
 
